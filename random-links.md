@@ -8,3 +8,11 @@
 
 # Adafruit_DAP
 [https://github.com/adafruit/Adafruit_DAP](https://github.com/adafruit/Adafruit_DAP)
+
+
+
+
+
+
+# Particle Blog
+[High School Robotics Course using the Particle.io Mesh Devices Blog](https://community.particle.io/t/high-school-robotics-course-using-the-particle-io-mesh-devices-blog/45692) If you have several hours this is interesting reading about a product that does not offer full access to the SOC.
