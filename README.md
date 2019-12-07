@@ -62,11 +62,11 @@ My First nRF52840 that I really liked, closest to the Nordic product but I am st
 
 
 ## Particle
-$15 USD [Particle.io Xenon](https://store.particle.io/products/xenon). Basically a nRF52840 USB Dongle (USB cable)
+$15 USD [Particle.io Xenon](https://store.particle.io/products/xenon). Basically a nRF52840 (USB cable)
 
 $27 USD [Particle Argon](https://store.particle.io/products/Argon) As above but with Wifi out of the box
 
-$53 USD [Particle Boron LTE North America](https://store.particle.io/products/Argon) As above but with Wifi and Celluar out of the box
+$53 USD [Particle Boron LTE North America](https://store.particle.io/collections/boron/products/boron-lte) As above but with Celluar.
 
 The Particle product is probably the most developed and easiest to use at the moment, however, in my opinion, it has the least open exposure to the SOC abilities. When this product is fully developed it will be very easy to use if you are willing to pay their proposed monthly fees!  
 
