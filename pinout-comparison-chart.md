@@ -16,7 +16,14 @@ A chart comparing the different Boards Pin out information. This is in progress.
 
 [Nordic nRF52840 Generic SOC](https://www.nordicsemi.com/-/media/DocLib/Other/Product_Spec/nRF52840PSv11pdf.pdf)
 
-[Nordic nRF52840 USB Dongle]()
+[Nordic nRF52840 Generic SOC Pin Assignments](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fps_nrf52840%2Fpin.html&cp=4_0_0_6_0_0&anchor=aqfn73)
+
+[Nordic nRF52840 Generic SOC NRF_GPIO_PIN_MAP](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fsdk_nrf5_v16.0.0%2Fgroup__nrf__gpio__hal.html&anchor=ga0d66f2aaf7771ca4424237174032bf6a)
+
+
+
+
+[Nordic nRF52840 USB Dongle pin digram](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_nrf52840_dongle%2FUG%2Fnrf52840_Dongle%2Fhw_drawings.html&cp=4_0_5_5_0)
 
 [Arduino Nano 33 BLE](https://www.mouser.com/catalog/specsheets/Arduino_06052019_ABX00030.pdf)
 
