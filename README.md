@@ -41,6 +41,8 @@ $10.00 USD [nRF52840 USB Dongle](https://www.digikey.com/product-detail/en/nordi
 
 The best, but most confusing set of examples are at the [Nordic NRF5 SDK](https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK/Download). 
 
+[Nordic Dev Zone](https://devzone.nordicsemi.com/) These guys try really hard to answer your questions.
+
 
 ## Arduino 
 $19.00 USD [Nano 33 BLE](https://store.arduino.cc/usa/nano-33-ble)  (USB cable)
@@ -49,7 +51,9 @@ $31.50 USD [Nano 33 BLE Sense with headers](https://store.arduino.cc/usa/nano-33
 
 This product is very new and has some issues as they are trying different programming structures than the Arduino is used to. The enormous open source Adruino community will get this thing working really well soon.  The Sense has a huge number of sensers which will make creating much easier.
 
-
+[Arduino BLE Forum](https://forum.arduino.cc/index.php?board=138.0)
+[Arduino BLE Sense Forum](https://forum.arduino.cc/index.php?board=139.0)
+Lots of users here with great suggestions. (Make sure you google questions first or get your hand slapped. Their search auto injects "site:https://forum.arduino.cc" into a google search)
 
 ## Adafruit 
 $25.00 USD [Feather nRF52840](https://www.adafruit.com/product/4062) 
@@ -68,14 +72,20 @@ $27 USD [Particle Argon](https://store.particle.io/products/Argon) As above but 
 
 $53 USD [Particle Boron LTE North America](https://store.particle.io/collections/boron/products/boron-lte) As above but with Celluar.
 
-The Particle product is probably the most developed and easiest to use at the moment, however, in my opinion, it has the least open exposure to the SOC abilities. When this product is fully developed it will be very easy to use if you are willing to pay their proposed monthly fees!  
+The Particle product is probably the most developed and easiest to use at the moment, however, in my opinion, it has the least open exposure to the SOC abilities. When this product is fully developed it will be very easy to use if you are willing to pay their proposed monthly fees! 
 
+[Particle Community](https://community.particle.io/)
 
+## Fanstel
+$18 USD [USB840F, Open Source BLE 5, Thread, Zigbee USB Dongle](https://www.fanstel.com/usb840f/). This USB dongle has no headers, not even sure if it actually has pins, comes in a case, and is fully secured. You need the factory key to work with it. Great for bussiness, bit too much of a pain for my level of hobby/education work.
+
+Fanstel BC840 module
 
 ## Sparkfun
 $30.00 USD [SparkFun Pro nRF52840 Mini - Bluetooth Development Board](https://www.sparkfun.com/products/15025). Also needs a usb cable. I do not have one of these but looking at the specs looks like it might have wifi as well as bluetooth, which might be interesting to try.
 
-
+# April
+$12.00 USD [April USB Dongle 52840](https://blog.aprbrother.com/product/april-usb-dongle-52840). No idea what this is, just found it, seems like only one is left. Kind of cute.
 
 ## Any others...
 
