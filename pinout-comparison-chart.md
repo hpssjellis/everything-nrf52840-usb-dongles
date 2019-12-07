@@ -14,7 +14,7 @@ A chart comparing the different Boards Pin out information. This is in progress.
 
 # Datsheet reference:
 
-[Nordic nRF52840 Generic SOC](https://www.nordicsemi.com/-/media/DocLib/Other/Product_Spec/nRF52840PSv11pdf.pdf)
+[Nordic nRF52840 Generic SOC](https://www.nordicsemi.com/-/media/DocLib/Other/Product_Spec/nRF52840PSv11pdf.pdf) (Large PDF document)
 
 [Nordic nRF52840 Generic SOC Pin Assignments](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fps_nrf52840%2Fpin.html&cp=4_0_0_6_0_0&anchor=aqfn73)
 
