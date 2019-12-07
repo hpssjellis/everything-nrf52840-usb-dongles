@@ -41,7 +41,7 @@ $10.00 USD [nRF52840 USB Dongle](https://www.digikey.com/product-detail/en/nordi
 
 The best, but most confusing set of examples are at the [Nordic NRF5 SDK](https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK/Download). 
 
-[Nordic Dev Zone](https://devzone.nordicsemi.com/) These guys try really hard to answer your questions.
+Community: [Nordic Dev Zone](https://devzone.nordicsemi.com/) These guys try really hard to answer your questions.
 
 
 ## Arduino 
@@ -51,18 +51,26 @@ $31.50 USD [Nano 33 BLE Sense with headers](https://store.arduino.cc/usa/nano-33
 
 This product is very new and has some issues as they are trying different programming structures than the Arduino is used to. The enormous open source Adruino community will get this thing working really well soon.  The Sense has a huge number of sensers which will make creating much easier.
 
+Community: 
+
 [Arduino BLE Forum](https://forum.arduino.cc/index.php?board=138.0)
+
 [Arduino BLE Sense Forum](https://forum.arduino.cc/index.php?board=139.0)
-Lots of users here with great suggestions. (Make sure you google questions first or get your hand slapped. Their search auto injects "site:https://forum.arduino.cc" into a google search)
+
+Lots of users here with great suggestions. (Make sure you google questions first or get your hand slapped. Their search auto injects site:https://forum.arduino.cc into a google search)
 
 ## Adafruit 
 $25.00 USD [Feather nRF52840](https://www.adafruit.com/product/4062) 
 Has the interesting ability to use CircuitPython, also has a github dedicated to fixing broken bootloaders to get some of these products onto the Arduino platform [Adafruit_DAP](https://github.com/adafruit/Adafruit_DAP)
 
+Community: [Adafruit Forum](https://forums.adafruit.com/index.php)
+
 ## MakerDiary
 $13.00 USD [nRF52840 MDK USB Dongle (PCBA)](https://store.makerdiary.com/collections/frontpage/products/nrf52840-mdk-usb-dongle)
 
 My First nRF52840 that I really liked, closest to the Nordic product but I am still having a few issues getting this working on lots of examples. This is probably the easiest Dongle to get working with the Nordic SDK.
+
+Community: [Community makerdiary](https://community.makerdiary.com/)
 
 
 ## Particle
@@ -74,18 +82,24 @@ $53 USD [Particle Boron LTE North America](https://store.particle.io/collections
 
 The Particle product is probably the most developed and easiest to use at the moment, however, in my opinion, it has the least open exposure to the SOC abilities. When this product is fully developed it will be very easy to use if you are willing to pay their proposed monthly fees! 
 
-[Particle Community](https://community.particle.io/)
+Community: [Particle Community](https://community.particle.io/)
 
 ## Fanstel
 $18 USD [USB840F, Open Source BLE 5, Thread, Zigbee USB Dongle](https://www.fanstel.com/usb840f/). This USB dongle has no headers, not even sure if it actually has pins, comes in a case, and is fully secured. You need the factory key to work with it. Great for bussiness, bit too much of a pain for my level of hobby/education work.
 
-Fanstel BC840 module
+Community: 
+
 
 ## Sparkfun
 $30.00 USD [SparkFun Pro nRF52840 Mini - Bluetooth Development Board](https://www.sparkfun.com/products/15025). Also needs a usb cable. I do not have one of these but looking at the specs looks like it might have wifi as well as bluetooth, which might be interesting to try.
 
-# April
+Community: 
+
+# April USB Dongle
 $12.00 USD [April USB Dongle 52840](https://blog.aprbrother.com/product/april-usb-dongle-52840). No idea what this is, just found it, seems like only one is left. Kind of cute. The Page says "This USB dongle is very similar with Nordic’s USB dongle PCA10059. But it has less pinouts and button." Comes with a huge antenna.
+
+Community: 
+
 
 ## Any others...
 
