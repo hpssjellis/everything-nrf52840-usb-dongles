@@ -13,16 +13,14 @@ The Nordic nRF52840 SOC is getting a lot of publicity for it's great BLE abiliti
 For pinout comparison chart    [pinout-comparison-chart.md](pinout-comparison-chart.md)
 
 
-My Openthread and Nordic SDK Online Browser compatible Docker. (Yes it is amazing).  [My Gitpod Github Openthread](https://github.com/hpssjellis/my-gitpod-of-openthread) This takes a very long time to build from scratch.
-
-First try the snapshot, takes a while to load, but worth it, Generated Dec 4th, 2019 updated with the Nordic sdk.
+My Openthread and Nordic SDK Online Browser compatible Docker. (Yes it is amazing).  [My Gitpod Github Openthread](https://github.com/hpssjellis/my-gitpod-of-openthread) This takes a very long time to build from scratch. First try the snapshot, takes a while to load, but worth it, Generated Dec 4th, 2019 updated with the Nordic sdk.
 
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/e709c382-8574-4775-876c-002bfeecc374)
 
 
 
-For random links    [random-links.md](random-links.md)
+For random links used while making this    [random-links.md](random-links.md)
 
 
 
