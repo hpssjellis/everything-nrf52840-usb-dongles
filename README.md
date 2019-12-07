@@ -52,7 +52,7 @@ This product is very new and has some issues as they are trying different progra
 
 
 ## Adafruit 
-$25.00 USD [Feather nRF52840] 
+$25.00 USD [Feather nRF52840](https://www.adafruit.com/product/4062) 
 Has the interesting ability to use CircuitPython, also has a github dedicated to fixing broken bootloaders to get some of these products onto the Arduino platform [Adafruit_DAP](https://github.com/adafruit/Adafruit_DAP)
 
 ## MakerDiary
@@ -73,7 +73,7 @@ The Particle product is probably the most developed and easiest to use at the mo
 
 
 ## Sparkfun
-$30.00 USD [SparkFun Pro nRF52840 Mini - Bluetooth Development Board](https://www.sparkfun.com/products/15025). Also needs a usb cable. I do not have one of these but looking at the specs looks like it might have wifi as well as bluetooth.
+$30.00 USD [SparkFun Pro nRF52840 Mini - Bluetooth Development Board](https://www.sparkfun.com/products/15025). Also needs a usb cable. I do not have one of these but looking at the specs looks like it might have wifi as well as bluetooth, which might be interesting to try.
 
 
 
