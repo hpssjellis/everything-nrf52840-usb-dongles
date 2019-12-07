@@ -85,7 +85,7 @@ Fanstel BC840 module
 $30.00 USD [SparkFun Pro nRF52840 Mini - Bluetooth Development Board](https://www.sparkfun.com/products/15025). Also needs a usb cable. I do not have one of these but looking at the specs looks like it might have wifi as well as bluetooth, which might be interesting to try.
 
 # April
-$12.00 USD [April USB Dongle 52840](https://blog.aprbrother.com/product/april-usb-dongle-52840). No idea what this is, just found it, seems like only one is left. Kind of cute.
+$12.00 USD [April USB Dongle 52840](https://blog.aprbrother.com/product/april-usb-dongle-52840). No idea what this is, just found it, seems like only one is left. Kind of cute. The Page says "This USB dongle is very similar with Nordic’s USB dongle PCA10059. But it has less pinouts and button." Comes with a huge antenna.
 
 ## Any others...
 
