@@ -1,6 +1,6 @@
 
 
-A chart comparing the different Boards
+A chart comparing the different Boards Pin out information. This is in progress.
 
 
 
