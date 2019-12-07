@@ -1,4 +1,4 @@
-# everything-nrf52840-usb-dongles
+# Everything About the nRF52840 USB Dongles
 Anything I can find about the various nrf52840 usb dongles by Nordic, Arduino, Adafruit, Sparkfun, MakerDiary and others
 
 
@@ -10,6 +10,15 @@ The Nordic nRF52840 SOC is getting a lot of publicity for it's great BLE abiliti
 
 
 For pinout comparison chart    [pinout-comparison-chart.md](pinout-comparison-chart.md)
+
+
+My Openthread and Nordic SDK Online Browser compatible Docker. (Yes it is amazing) [My Gitpod Githup] (https://github.com/hpssjellis/my-gitpod-of-openthread)
+
+First try the snapshot, takes a while to load, but worth it, Dec 4th, 2019 updated openthread with Nordic sdk.
+
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/e709c382-8574-4775-876c-002bfeecc374)
+
 
 
 For random links    [random-links.md](random-links.md)
