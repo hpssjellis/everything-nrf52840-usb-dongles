@@ -34,7 +34,7 @@ For random links used while making this    [random-links.md](random-links.md)
 
 # The different Boards
 
-Note: The dongle can plug directly into a computer USB prot. They can also be powered by Cell phone chargers. The boards that need a USB cable are not necessarily better or worse they just need the cable. Both types can also be powered by an outside power source with varing levels of acceptable voltages. (Worth looking into, I know the Nano 33 BLE has some interesting feactures here I think they can be powered by a 12 V battery.)
+Note: The dongle can plug directly into a computer USB port. They can also be powered by Cell phone chargers. The boards that need a USB cable are not necessarily better or worse they just need the cable. Both types can also be powered by an outside power source with varing levels of acceptable voltages. (Worth looking into, I know the Nano 33 BLE has some interesting features here, I think it can be powered by a 12 V battery. Better check)
 
 ## Nordic 
 $10.00 USD [nRF52840 USB Dongle](https://www.digikey.com/product-detail/en/nordic-semiconductor-asa/NRF52840-DONGLE/1490-1073-ND/9491124?_ga=2.112542724.1204958722.1575703702-701218832.1573252054&_gac=1.12604485.1574457358.Cj0KCQiAq97uBRCwARIsADTziyako1nHRHIJGlUf6ZprMFUFuqiaruXRiJ3sGP4mQ3FC3kIQmQxaQZsaAswzEALw_wcB)
