@@ -51,7 +51,7 @@ $31.50 USD [Nano 33 BLE Sense with headers](https://store.arduino.cc/usa/nano-33
 
 This product is very new and has some issues as they are trying different programming structures than the Arduino is used to. The enormous open source Adruino community will get this thing working really well soon.  The Sense has a huge number of sensers which will make creating much easier.
 
-Community:  [Arduino BLE Forum](https://forum.arduino.cc/index.php?board=138.0)  [Arduino BLE Sense Forum](https://forum.arduino.cc/index.php?board=139.0)
+Community:  [Arduino BLE Forum](https://forum.arduino.cc/index.php?board=138.0) or the  [Arduino BLE Sense Forum](https://forum.arduino.cc/index.php?board=139.0)
 Lots of users here with great suggestions. (Make sure you google questions first or get your hand slapped. Their search auto injects site:https://forum.arduino.cc into a google search)
 
 ## Adafruit 
