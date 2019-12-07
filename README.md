@@ -51,12 +51,7 @@ $31.50 USD [Nano 33 BLE Sense with headers](https://store.arduino.cc/usa/nano-33
 
 This product is very new and has some issues as they are trying different programming structures than the Arduino is used to. The enormous open source Adruino community will get this thing working really well soon.  The Sense has a huge number of sensers which will make creating much easier.
 
-Community: 
-
-[Arduino BLE Forum](https://forum.arduino.cc/index.php?board=138.0)
-
-[Arduino BLE Sense Forum](https://forum.arduino.cc/index.php?board=139.0)
-
+Community:  [Arduino BLE Forum](https://forum.arduino.cc/index.php?board=138.0)  [Arduino BLE Sense Forum](https://forum.arduino.cc/index.php?board=139.0)
 Lots of users here with great suggestions. (Make sure you google questions first or get your hand slapped. Their search auto injects site:https://forum.arduino.cc into a google search)
 
 ## Adafruit 
@@ -93,7 +88,7 @@ Community:
 ## Sparkfun
 $30.00 USD [SparkFun Pro nRF52840 Mini - Bluetooth Development Board](https://www.sparkfun.com/products/15025). Also needs a usb cable. I do not have one of these but looking at the specs looks like it might have wifi as well as bluetooth, which might be interesting to try.
 
-Community: 
+Community: [Sparkfun community](https://forum.sparkfun.com/)
 
 # April USB Dongle
 $12.00 USD [April USB Dongle 52840](https://blog.aprbrother.com/product/april-usb-dongle-52840). No idea what this is, just found it, seems like only one is left. Kind of cute. The Page says "This USB dongle is very similar with Nordic’s USB dongle PCA10059. But it has less pinouts and button." Comes with a huge antenna.
