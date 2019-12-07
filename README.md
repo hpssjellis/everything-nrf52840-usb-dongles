@@ -6,4 +6,7 @@ Created Dec 7th, 2019
 
 
 
-For pinout comparison chart    pinout-comparison-chart.md
+For pinout comparison chart    [pinout-comparison-chart.md](pinout-comparison-chart.md)
+
+
+
