@@ -51,18 +51,15 @@ updated Dec 8th 2019. Please send an issue or PR if you can replace any of the "
 |**Run Arduino Examples using Nordic nrf-connect for desktop** | not sure| not sure| not sure | not sure | not sure  |
 
 
-Note: Easiest approach would be to get the Nordic dongle working on the Arduino platform, but I have had some issues doing the opposite with the Nano 33 BLE. Getting it to load Nordic SDK examples. It does work but it bit flakey and not yet sure of pin assignments. (I bricked my Nano 33 BLE Sense and need a j-link to fix it). Best to see if I can get some of these boards working fully on both platforms.
+Note: Easiest approach would be to get the Nordic dongle working on the Arduino platform, but I have had some issues doing the opposite with the Nano 33 BLE getting it to load Nordic SDK examples. It does work but it is a bit flakey and I am not yet sure of all pin assignments. (I bricked my Nano 33 BLE Sense and need a j-link to fix it). Best to see if I can get some of these boards working fully on both platforms.
 
 # Present thinking: 
 
 I think I should use the Nordic board for basic BLE, Arduino Nano 33 BLE Sense board for most sensory work. Still wondering how to connect Wifi to these boards for the occassional diagnostics when needed.
-1. Use the $18 USD [Arduino Nano 33 IOT](https://store.arduino.cc/usa/nano-33-iot) which has wifi but only bluetooth 4.2 but that should be compatible, except long range BLE. Both Radios can not operate at the same time.
-2. Use $20.00 USD [ESP8266](https://www.adafruit.com/product/3213) stacking Adafruit feather for Wifi support on whichever board I finally use or something with the $22.00 USD [ESP32](https://www.adafruit.com/product/3619).
-3. Use the Adafruit $19.00 USD [Particle Argon](https://www.adafruit.com/product/2721), which has both the nRF52840 and ESP32 modules but might be very difficult to program without the Particle pay per use Cloud. Just found the Adafruit [Debugger](https://www.adafruit.com/product/4001) and since it is supported by Adafruit it might allow better access to this board. [Adafruit Steps here](https://learn.adafruit.com/circuitpython-on-the-nrf52/build-flash-particle)
+1. Use the $18 USD [Arduino Nano 33 IOT](https://store.arduino.cc/usa/nano-33-iot) which has wifi but only bluetooth 4.2 but that should be compatible, except for long range BLE. Something I read is that both Radios can not operate at the same time, not sure if that is going to be a problem.
+2. Use $20.00 USD [ESP8266](https://www.adafruit.com/product/3213) stacking Adafruit feather for Wifi support on whichever board I finally use or something with the $22.00 USD [ESP32](https://www.adafruit.com/product/3619) also with stacking feather form factor.
+3. Use the Adafruit $19.00 USD [Particle Argon](https://www.adafruit.com/product/2721), which has both the nRF52840 and ESP32 modules but might be very difficult to program without the Particle pay per use Cloud. However I just found the Adafruit [Debugger](https://www.adafruit.com/product/4001) and since it is supported by Adafruit it might allow better access to this board. [Adafruit Steps here](https://learn.adafruit.com/circuitpython-on-the-nrf52/build-flash-particle). LIke the segger edu this debugger is just a type of j-link with the correct connector for the particle boards.
 4. Any new board coming out with the nRF52840 and Wifi?
-
-Interesting [nordic on arduino ???](https://github.com/sandeepmistry/arduino-nRF5/issues/70)
-and [platform.io example](https://github.com/Redferne/platform-nordicnrf52/tree/pca10059/examples/arduino-pca10059)
 
 .
 
