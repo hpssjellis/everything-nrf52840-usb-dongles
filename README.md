@@ -55,8 +55,11 @@ Note: Easiest approach would be to get the Nordic dongle working on the Arduino 
 
 # Present thinking: 
 
-Nordic board for basic BLE, Sparkfun board for BLE and Wifi, Arduino board for most sensory work.
-
+I think I should use the Nordic board for basic BLE, Arduino Nano 33 BLE Sense board for most sensory work. Still wondering how to connect Wifi to these boards for the occassional diagnostics when needed.
+1. Use the Arduino Nano 33 IOT which has wifi but only bluetooth 4.2 but that should be compatible, except long range BLE. Both Radios can not operate at the same time.
+2. Use ESP8266 breakout for Wifi support on whichever board I finally use or something with the ESP32.
+3. Use the Particle Argon, which has both the nRF52840 and ESP32 modules but might be very difficult to program without the Particle  pay per use Cloud.
+4. Any new board coming out with the nRF52840 and Wifi?
 
 Interesting [nordic on arduino ???](https://github.com/sandeepmistry/arduino-nRF5/issues/70)
 and [platform.io example](https://github.com/Redferne/platform-nordicnrf52/tree/pca10059/examples/arduino-pca10059)
