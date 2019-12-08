@@ -23,12 +23,12 @@ I want to make the best high school robotics program.
 
 # Basic Concept
 
-The [Nordic nRF52840 SOC](https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52840) is getting a lot of publicity for it's great BLE (Bluetooth Low Energy) abilities and has been embedded in many boards from Nordic, Particle, Adafruit, Sparkfun, MakerDiary and Arduino. 
+The [Nordic nRF52840 SOC](https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52840) is getting a lot of publicity for it's great BLE (Bluetooth Low Energy) abilities and has been embedded in many boards from Nordic, Particle, Fanstel, Adafruit, Sparkfun, MakerDiary and Arduino. 
 
 
 # The Problem
 
-All the above companies that use the nRF52840 SOC embedded boards have their own technique for programming the boards, making it very difficult to pick and choose the product combination that works well in the classroom. Luckily Arduino has entered the race with their new Nano 33 BLE. That brings a huge community of capable hobbyists and professional engineers to the issue.  
+All the above companies that use the nRF52840 SOC embedded boards have their own technique for programming the boards, making it very difficult to pick and choose the product combination that works well in the classroom. Luckily, Arduino has just entered the race with their new Nano 33 BLE. That brings a huge community of capable hobbyists and professional engineers to the issue.  
 
 
 
@@ -37,13 +37,13 @@ All the above companies that use the nRF52840 SOC embedded boards have their own
   
 # My (our) Solution
 
-I would like to see how many of these boards we can get working on both the Nordic and Arduino platforms. Then I can choose which boards to include in my new version of my High School Robotics Course. 
+I would like to see how many of these boards we can get working on both the Nordic and Arduino platforms. Then I can choose which boards to include in my new version of my high school robotics Course. Any help would be appreciated
 
 
 # IDE Working Tutorials Chart 
-updated Dec 8th 2019. Please send issue or PR if you can replace any "not sure" with a link. Thanks in Advance. 
+updated Dec 8th 2019. Please send an issue or PR if you can replace any of the "not sure" with a link. Thanks in Advance. 
 
-|                       | Nordic nrf52840 USB Dongle| Arduino Nano 33 BLE| Adafruit Feather nrf52840| Particle Xenon|Sparkfun Pro nRF52840 Mini|
+|  | Nordic nrf52840 USB Dongle| Arduino Nano 33 BLE| Adafruit Feather nrf52840| Particle Xenon|Sparkfun Pro nRF52840 Mini|
 | --- | --- | --- | --- | --- | --- |
 |**[Arduino IDE](https://www.tutorialspoint.com/arduino/arduino_installation.htm)**    |   not sure | [yes](https://www.arduino.cc/en/Guide/NANO33BLE) | [yes](https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/arduino-bsp-setup) | [yes, needs j-link](https://medium.com/home-wireless/using-segger-studio-and-nordic-sdk-with-particle-xenon-91e34aeb632a) | [yes, few adjustements](https://learn.sparkfun.com/tutorials/nrf52840-development-with-arduino-and-circuitpython/all)  |
 |**[Nordic nrf-connect for desktop](https://www.novelbits.io/nrf52840-usb-dongle-tutorial-1/)**  | [yes](https://www.novelbits.io/nrf52840-usb-dongle-tutorial-1/) | not sure | not sure | not sure | not sure  |
