@@ -44,7 +44,7 @@ I would like to see how many of these boards we can get working on both the Nord
 updated Dec 8th 2019. Please send issue or PR if you can replace any "not sure" with a link. Thanks in Advance. 
 
 |                       | Nordic nrf52840 USB Dongle| Arduino Nano 33 BLE| Adafruit Feather nrf52840| Particle Xenon|Sparkfun Pro nRF52840 Mini|
-|:-------------:        | :-------------:| :-------------:    | :-------------:          | :------------:| :-------------:          |
+| --- | --- | --- | --- | --- | --- |
 |[Arduino IDE](https://www.tutorialspoint.com/arduino/arduino_installation.htm)            |   not sure | [yes](https://www.arduino.cc/en/Guide/NANO33BLE) | [yes](https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/arduino-bsp-setup) | [yes, needs j-link](https://medium.com/home-wireless/using-segger-studio-and-nordic-sdk-with-particle-xenon-91e34aeb632a) | [yes, few adjustements](https://learn.sparkfun.com/tutorials/nrf52840-development-with-arduino-and-circuitpython/all)  |
 |[Nordic nrf-connect for desktop](https://www.novelbits.io/nrf52840-usb-dongle-tutorial-1/)| [yes](https://www.novelbits.io/nrf52840-usb-dongle-tutorial-1/) | not sure | not sure | not sure | not sure  |
 |Run Nordic examples from Arduino| not sure | [yes, issues, best to have a j-link](https://forum.arduino.cc/index.php?topic=649008.msg4392009#msg4392009) | not sure | not sure | not sure  |
