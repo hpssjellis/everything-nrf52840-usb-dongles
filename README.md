@@ -7,15 +7,15 @@ Created Dec 7th, 2019
 
   
 # Big Picture
-I want to make the best High School North American Robotics Program. 
+I want to make the best high school robotics program. 
 
 1. I have already finished and student tested for 3 years a wifi based Robotics program Github at: [particle.io-photon-high-school-robotics](https://github.com/hpssjellis/particle.io-photon-high-school-robotics)  With Sensors, Actuators, web control, SPI, I2C, uArt and websockets. 
 
 2. [A Machine Learning Javascript Tensorflow.js Program](https://www.rocksetta.com/tensorflowjs/). 
 
-3. A cryptocurrency Internet of Things Program using IOTA. The hackster [here](https://www.hackster.io/jeremy-ellis/particle-photon-pay-iota-to-read-sensors-edb7b8). 
+3. A cryptocurrency internet of things program using IOTA. The hackster [here](https://www.hackster.io/jeremy-ellis/particle-photon-pay-iota-to-read-sensors-edb7b8). Waiting for IOTA software to mature. Githubs: [iota-community](https://github.com/iota-community)
 
-4.Now I need to update my High School course to include [BLE](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy) and [Openthread](http://openthread.io).
+4. Now I need to update my High School course to include [BLE](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy) and [Openthread](http://openthread.io).
 
 
 
