@@ -43,11 +43,11 @@ I would like to see how many of these boards we can get working on both the Nord
 # IDE Working Tutorials Chart 
 updated Dec 8th 2019. Please send a PR or issue if you know of any other links to better tutorials. 
 
-|                       | Nordic nrf52840| Arduino Nano 33 BLE| Adafruit Feather nrf52840| Particle Xenon|Sparkfun Pro nRF52840 Mini|
+|                       | Nordic nrf52840 USB Dongle| Arduino Nano 33 BLE| Adafruit Feather nrf52840| Particle Xenon|Sparkfun Pro nRF52840 Mini|
 |:-------------:        | :-------------:| :-------------:    | :-------------:          | :------------:| :-------------:          |
-|[Arduino IDE](https://www.tutorialspoint.com/arduino/arduino_installation.htm)            |  | Not sure [yes](https://www.arduino.cc/en/Guide/NANO33BLE) | [yes](https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/arduino-bsp-setup) | [yes, needs j-link](https://medium.com/home-wireless/using-segger-studio-and-nordic-sdk-with-particle-xenon-91e34aeb632a) | [yes, few adjustements](https://learn.sparkfun.com/tutorials/nrf52840-development-with-arduino-and-circuitpython/all)  |
+|[Arduino IDE](https://www.tutorialspoint.com/arduino/arduino_installation.htm)            |   Not sure | [yes](https://www.arduino.cc/en/Guide/NANO33BLE) | [yes](https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/arduino-bsp-setup) | [yes, needs j-link](https://medium.com/home-wireless/using-segger-studio-and-nordic-sdk-with-particle-xenon-91e34aeb632a) | [yes, few adjustements](https://learn.sparkfun.com/tutorials/nrf52840-development-with-arduino-and-circuitpython/all)  |
 |Run Nordic examples from Arduino|[yes](https://www.novelbits.io/nrf52840-usb-dongle-tutorial-1/) | [yes, issues, best to have a j-link](https://forum.arduino.cc/index.php?topic=649008.msg4392009#msg4392009) | Not sure | Not Sure | Not Sure  |
-|[Nordic nrf-connect for desktop](https://www.novelbits.io/nrf52840-usb-dongle-tutorial-1/)| Not sure| [yes, issues, best to have a j-link](https://forum.arduino.cc/index.php?topic=649008.msg4392009#msg4392009) | Not sure | Not Sure | Not Sure  |
+|[Nordic nrf-connect for desktop](https://www.novelbits.io/nrf52840-usb-dongle-tutorial-1/)| Not sure | Not sure | Not Sure | Not Sure  |
 |Run Arduino Examples from Nordic| Not sure| Not sure| Not sure | Not Sure | Not Sure  |
 
 Note: Easiest approach would be to get the Nordic dongle working on the Arduino platform, but I have had some issues with the Nano 33 BLE loading Nordic SDK examples (I bricked my Nano and need a j-link to fix it, sad LOL). Best to see if I can get some of these borads working on both platforms fully. 
