@@ -27,3 +27,12 @@
 # Nordic on Arduino platform ?
 Interesting [nordic on arduino ???](https://github.com/sandeepmistry/arduino-nRF5/issues/70)
 and [platform.io example](https://github.com/Redferne/platform-nordicnrf52/tree/pca10059/examples/arduino-pca10059)
+
+
+
+# platformerio 
+[www.platformio.org](https://platformio.org/)
+
+[platformio boards](https://docs.platformio.org/en/latest/boards/index.html)
+
+[particleArgon](https://docs.platformio.org/en/latest/boards/nordicnrf52/particle_argon.html)
