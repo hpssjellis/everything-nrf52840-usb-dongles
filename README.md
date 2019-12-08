@@ -57,6 +57,8 @@ Note: Easiest approach would be to get the Nordic dongle working on the Arduino 
 Nordic board for basic BLE, Sparkfun board for BLE and Wifi, Arduino board for most sensory work.
 
 
+Interesting [nordic on arduino ???](https://github.com/sandeepmistry/arduino-nRF5/issues/70)
+
 
 .
 
