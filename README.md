@@ -8,10 +8,15 @@ Created Dec 7th, 2019
   
 # Big Picture
 I want to make the best High School North American Robotics Program. 
+
 1. I have already finished and student tested for 3 years a wifi based Robotics program Github at: [particle.io-photon-high-school-robotics](https://github.com/hpssjellis/particle.io-photon-high-school-robotics)  With Sensors, Actuators, web control, SPI, I2C, uArt and websockets. 
-1. [A Machine Learning Javascript Tensorflow.js Program](https://www.rocksetta.com/tensorflowjs/). 
+
+2. [A Machine Learning Javascript Tensorflow.js Program](https://www.rocksetta.com/tensorflowjs/). 
+
 3. A cryptocurrency Internet of Things Program using IOTA. The hackster [here](https://www.hackster.io/jeremy-ellis/particle-photon-pay-iota-to-read-sensors-edb7b8). 
-4.Now I need to update my High School course to include [BLE](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy) and [Openthread](http://openthread.io)  
+
+4.Now I need to update my High School course to include [BLE](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy) and [Openthread](http://openthread.io).
+
 
 
 
@@ -33,6 +38,32 @@ All the above companies that use the nRF52840 SOC embedded boards have their own
 # My (our) Solution
 
 I would like to see how many of these boards we can get working on both the Nordic and Arduino platforms. Then I can choose which boards to include in my new version of my High School Robotics Course. 
+
+
+# IDE Working Chart 
+updated Dec 8th 2019. Please send a PR or issue if you know of any other methods to use a specific IDE
+
+|                       | Nordic nrf52840| Arduino Nano 33 BLE| Adafruit Feather nrf52840| Particle Xenon|Sparkfun Pro nRF52840 Mini|
+|:-------------:        | :-------------:| :-------------:    | :-------------:          | :------------:| :-------------:          |
+
+|Arduino IDE            | 
+1 ? 
+| [yes](https://www.arduino.cc/en/Guide/NANO33BLE) 
+| [yes](https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/arduino-bsp-setup) 
+| [yes, needs j-link](https://medium.com/home-wireless/using-segger-studio-and-nordic-sdk-with-particle-xenon-91e34aeb632a) 
+| [yes, few adjustements](https://learn.sparkfun.com/tutorials/nrf52840-development-with-arduino-and-circuitpython/all)  
+|
+
+
+|nrf-connect for desktop|
+1 [yes](https://www.novelbits.io/nrf52840-usb-dongle-tutorial-1/) 
+| [yes, best to have a j-link](https://forum.arduino.cc/index.php?topic=649008.msg4392009#msg4392009) 
+| Not sure 
+| Not Sure 
+| Not Sure  
+|
+
+
 
 
 
