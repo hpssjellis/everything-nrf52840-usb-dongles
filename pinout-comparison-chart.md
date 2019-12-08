@@ -3,11 +3,18 @@
 A chart comparing the different Boards Pin out information. This is in progress.
 
 
+Draft Pinout chart
 
-
-| Nordic nrf52840        | Arduino Nano 33 BLE  | Adafruit Feather nrf52840 | Particle Xenon   | Sparkfun Pro nRF52840 Mini|
-| :-------------:        | :-------------:      | :-------------:           | :-------------:  | :-------------: |
-| 1      | 2          | 3 | 4 | 5 |
+| Nordic nrf52840        | Arduino Nano 33 BLE  | Adafruit Feather nrf52840 | Particle Xenon   | Sparkfun Pro nRF52840 Mini |
+| :-------------:        | :-------------:      | :-------------:           | :-------------:  | :-------------:            |
+| 1                      | 2                    | 3                         | 4                | 5                          |
+| 1                      | 2                    | 3                         | 4                | 5                          |
+| 1                      | 2                    | 3                         | 4                | 5                          |
+| 1                      | 2                    | 3                         | 4                | 5                          |
+| 1                      | 2                    | 3                         | 4                | 5                          |
+| 1                      | 2                    | 3                         | 4                | 5                          |
+| 1                      | 2                    | 3                         | 4                | 5                          |
+| 1                      | 2                    | 3                         | 4                | 5                          |
 
 
 
