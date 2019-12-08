@@ -47,8 +47,9 @@ updated Dec 8th 2019. Please send an issue or PR if you can replace any of the "
 | --- | --- | --- | --- | --- | --- |
 |**[Arduino IDE](https://www.tutorialspoint.com/arduino/arduino_installation.htm)**    |   not sure | [yes](https://www.arduino.cc/en/Guide/NANO33BLE) | [yes](https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/arduino-bsp-setup) | [yes, needs j-link](https://medium.com/home-wireless/using-segger-studio-and-nordic-sdk-with-particle-xenon-91e34aeb632a) | [yes, few adjustements](https://learn.sparkfun.com/tutorials/nrf52840-development-with-arduino-and-circuitpython/all)  |
 |**[Nordic nrf-connect for desktop](https://www.novelbits.io/nrf52840-usb-dongle-tutorial-1/)**  | [yes](https://www.novelbits.io/nrf52840-usb-dongle-tutorial-1/) | not sure | not sure | not sure | not sure  |
-|**Run Nordic-SDK examples using Arduino IDE**| not sure | [yes, issues, best to have a j-link](https://forum.arduino.cc/index.php?topic=649008.msg4392009#msg4392009) | not sure | not sure | not sure  |
+|**Run Nordic-SDK examples somehow**| not sure | [yes, issues, best to have a j-link](https://forum.arduino.cc/index.php?topic=649008.msg4392009#msg4392009) | not sure | not sure | [advanced-development-with-the-nrf5-sdk](https://learn.sparkfun.com/tutorials/nrf52840-advanced-development-with-the-nrf5-sdk)  |
 |**Run Arduino Examples using Nordic nrf-connect for desktop** | not sure| not sure| not sure | not sure | not sure  |
+
 
 Note: Easiest approach would be to get the Nordic dongle working on the Arduino platform, but I have had some issues doing the opposite with the Nano 33 BLE. Getting it to load Nordic SDK examples. It does work but it bit flakey and not yet sure of pin assignments. (I bricked my Nano 33 BLE Sense and need a j-link to fix it). Best to see if I can get some of these boards working fully on both platforms.
 
