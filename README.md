@@ -1,5 +1,5 @@
 # Everything About the nRF52840 USB Dongles
-Anything I can find about the various nrf52840 usb  (With USB cables or direct plugin dongles) by Nordic, Arduino, Adafruit, Sparkfun, MakerDiary and others
+Anything I can find about the various nrf52840 (either with USB cables or direct plugin dongles) by Nordic, Arduino, Adafruit, Sparkfun, MakerDiary and others
 
 
 Created Dec 7th, 2019
