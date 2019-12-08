@@ -41,7 +41,7 @@ I would like to see how many of these boards we can get working on both the Nord
 
 
 # IDE Working Tutorials Chart 
-updated Dec 8th 2019. Please send a PR or issue if you know of any other links to better tutorials. 
+updated Dec 8th 2019. Please send issue or PR if you can replace any "not sure" with a link. Thanks in Advance. 
 
 |                       | Nordic nrf52840 USB Dongle| Arduino Nano 33 BLE| Adafruit Feather nrf52840| Particle Xenon|Sparkfun Pro nRF52840 Mini|
 |:-------------:        | :-------------:| :-------------:    | :-------------:          | :------------:| :-------------:          |
