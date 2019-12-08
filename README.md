@@ -40,13 +40,13 @@ All the above companies that use the nRF52840 SOC embedded boards have their own
 I would like to see how many of these boards we can get working on both the Nordic and Arduino platforms. Then I can choose which boards to include in my new version of my High School Robotics Course. 
 
 
-# IDE Working Chart 
-updated Dec 8th 2019. Please send a PR or issue if you know of any other methods to use a specific IDE
+# IDE Working Tutorials Chart 
+updated Dec 8th 2019. Please send a PR or issue if you know of any other links to better tutorials. 
 
 |                       | Nordic nrf52840| Arduino Nano 33 BLE| Adafruit Feather nrf52840| Particle Xenon|Sparkfun Pro nRF52840 Mini|
 |:-------------:        | :-------------:| :-------------:    | :-------------:          | :------------:| :-------------:          |
-|Arduino IDE            |  ? | [yes](https://www.arduino.cc/en/Guide/NANO33BLE) | [yes](https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/arduino-bsp-setup) | [yes, needs j-link](https://medium.com/home-wireless/using-segger-studio-and-nordic-sdk-with-particle-xenon-91e34aeb632a) | [yes, few adjustements](https://learn.sparkfun.com/tutorials/nrf52840-development-with-arduino-and-circuitpython/all)  |
-|nrf-connect for desktop|[yes](https://www.novelbits.io/nrf52840-usb-dongle-tutorial-1/) | [yes, best to have a j-link](https://forum.arduino.cc/index.php?topic=649008.msg4392009#msg4392009) | Not sure | Not Sure | Not Sure  |
+|[Arduino IDE](https://www.tutorialspoint.com/arduino/arduino_installation.htm)            |  ? | [yes](https://www.arduino.cc/en/Guide/NANO33BLE) | [yes](https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/arduino-bsp-setup) | [yes, needs j-link](https://medium.com/home-wireless/using-segger-studio-and-nordic-sdk-with-particle-xenon-91e34aeb632a) | [yes, few adjustements](https://learn.sparkfun.com/tutorials/nrf52840-development-with-arduino-and-circuitpython/all)  |
+|[nrf-connect for desktop](https://www.novelbits.io/nrf52840-usb-dongle-tutorial-1/)|[yes](https://www.novelbits.io/nrf52840-usb-dongle-tutorial-1/) | [yes, best to have a j-link](https://forum.arduino.cc/index.php?topic=649008.msg4392009#msg4392009) | Not sure | Not Sure | Not Sure  |
 
 
 
