@@ -10,7 +10,8 @@
 [https://github.com/adafruit/Adafruit_DAP](https://github.com/adafruit/Adafruit_DAP)
 
 
-
+# Arduino nrf52840 support?
+[arduino-nRF5](https://sandeepmistry.github.io/arduino-nRF5/package_nRF5_boards_index.json)
 
 
 
