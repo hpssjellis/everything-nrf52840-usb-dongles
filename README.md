@@ -4,9 +4,22 @@ Anything I can find about the various nrf52840 usb  (With USB cables or direct p
 
 Created Dec 7th, 2019
 
+<font color=blue>
+# Big Picture
+I want to make the best High School North American Robotics Program. I have already finished and student tested for 3 years a wifi based Robotics program Github at: [particle.io-photon-high-school-robotics](https://github.com/hpssjellis/particle.io-photon-high-school-robotics)  With Sensors, Actuators, web control, SPI, I2C, uArt and websockets. [A Machine Learning Javascript Tensorflow.js Program](https://www.rocksetta.com/tensorflowjs/). A cryptocurrency Internet of Things Program using IOTA. The hackster [here](https://www.hackster.io/jeremy-ellis/particle-photon-pay-iota-to-read-sensors-edb7b8). Now I need to update my High School course to include [BLE](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy) and [Openthread](http://openthread.io)  
+
+</font>
+
 # Basic concept
 
-The Nordic nRF52840 SOC is getting a lot of publicity for it's great BLE abilities and has been embedded in many boards from Nordic, Particle, Adafruit, Sparkfun, MakerDiary and Arduino. Unfortunately each company has their own way to program these boards with varying exposure to the SOC's abilities.
+The [Nordic nRF52840 SOC](https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52840) is getting a lot of publicity for it's great BLE (Bluetooth Low Energy) abilities and has been embedded in many boards from Nordic, Particle, Adafruit, Sparkfun, MakerDiary and Arduino. Unfortunately each company has their own way to program these boards with varying exposure to the SOC's abilities.
+
+
+# the Problem
+
+
+
+
 
 # Important links
 
