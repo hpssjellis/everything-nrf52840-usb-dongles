@@ -21,3 +21,9 @@
 
 # Nordic software
 [Nordic nrf-connect for desktop download page](https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Connect-for-desktop/Download#infotabs)
+
+
+
+# Nordic on Arduino platform ?
+Interesting [nordic on arduino ???](https://github.com/sandeepmistry/arduino-nRF5/issues/70)
+and [platform.io example](https://github.com/Redferne/platform-nordicnrf52/tree/pca10059/examples/arduino-pca10059)
