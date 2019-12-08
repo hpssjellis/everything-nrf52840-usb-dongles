@@ -36,3 +36,5 @@ and [platform.io example](https://github.com/Redferne/platform-nordicnrf52/tree/
 [platformio boards](https://docs.platformio.org/en/latest/boards/index.html)
 
 [particleArgon](https://docs.platformio.org/en/latest/boards/nordicnrf52/particle_argon.html)
+
+[zephyr framework](https://docs.platformio.org/en/latest/frameworks/zephyr.html#framework-zephyr)
