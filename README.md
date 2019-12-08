@@ -50,7 +50,11 @@ updated Dec 8th 2019. Please send an issue or PR if you can replace any of the "
 |**Run Nordic examples from Arduino**| not sure | [yes, issues, best to have a j-link](https://forum.arduino.cc/index.php?topic=649008.msg4392009#msg4392009) | not sure | not sure | not sure  |
 |**Run Arduino Examples from Nordic** | not sure| not sure| not sure | not sure | not sure  |
 
-Note: Easiest approach would be to get the Nordic dongle working on the Arduino platform, but I have had some issues with the Nano 33 BLE loading Nordic SDK examples (I bricked my Nano and need a j-link to fix it). Best to see if I can get some of these boards working fully on both platforms. 
+Note: Easiest approach would be to get the Nordic dongle working on the Arduino platform, but I have had some issues doing the opposite with the Nano 33 BLE. Getting it to load Nordic SDK examples. It does work but it bit flakey and not yet sure of pin assignments. (I bricked my Nano 33 BLE Sense and need a j-link to fix it). Best to see if I can get some of these boards working fully on both platforms.
+
+# Present thinking: 
+
+Nordic board for basic BLE, Sparkfun board for BLE and Wifi, Arduino board for most sensory work.
 
 
 
