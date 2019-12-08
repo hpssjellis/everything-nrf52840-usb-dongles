@@ -58,7 +58,7 @@ Nordic board for basic BLE, Sparkfun board for BLE and Wifi, Arduino board for m
 
 
 Interesting [nordic on arduino ???](https://github.com/sandeepmistry/arduino-nRF5/issues/70)
-
+and [platform.io example](https://github.com/Redferne/platform-nordicnrf52/tree/pca10059/examples/arduino-pca10059)
 
 .
 
