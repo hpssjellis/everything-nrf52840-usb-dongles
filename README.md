@@ -37,7 +37,7 @@ All the above companies that use the nRF52840 SOC embedded boards have their own
   
 # My (our) Solution
 
-I would like to see how many of these boards we can get working on both the Nordic and Arduino platforms. Then I can choose which boards to include in my new version of my high school robotics Course. Any help would be appreciated
+I would like to see how many of these boards we can get working on both the Nordic and Arduino platforms. Then I can choose which boards to include in my new version of my high school robotics course. Any help would be appreciated
 
 
 # IDE Working Tutorials Chart 
