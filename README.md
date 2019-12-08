@@ -13,7 +13,7 @@ I want to make the best high school robotics program.
 
 2. [A Machine Learning Javascript Tensorflow.js Program](https://www.rocksetta.com/tensorflowjs/). 
 
-3. A cryptocurrency internet of things program using IOTA. The hackster [here](https://www.hackster.io/jeremy-ellis/particle-photon-pay-iota-to-read-sensors-edb7b8). Waiting for IOTA software to mature. Githubs: [iota-community](https://github.com/iota-community)
+3. A cryptocurrency internet of things program using IOTA and a microcontroller. My hackster [here](https://www.hackster.io/jeremy-ellis/particle-photon-pay-iota-to-read-sensors-edb7b8). Waiting for IOTA software to mature. Githubs: [iota-community](https://github.com/iota-community)
 
 4. Now I need to update my high school course to include [BLE](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy) and [Openthread](http://openthread.io), but which boards to purchase?
 
