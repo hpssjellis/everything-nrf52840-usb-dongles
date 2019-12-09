@@ -5,6 +5,13 @@ Anything I can find about the various nrf52840 (either with USB cables or direct
 Created Dec 7th, 2019
 
 
+# Big update Dec  9th, 2019
+
+# Just use [www.platformio.org](https://platformio.org/)
+
+Will update later but PlatformIO does seem to solve a lot of these issues.
+
+
   
 # Big Picture
 I want to make the best high school robotics program. 
@@ -63,7 +70,11 @@ I think I should use the Nordic board for basic BLE, Arduino Nano 33 BLE Sense b
 
 .
 
+# Big update Dec  9th, 2019
 
+# Just use [www.platformio.org](https://platformio.org/)
+
+Will update later but PlatformIO does seem to solve a lot of these issues.
 
 .
 
