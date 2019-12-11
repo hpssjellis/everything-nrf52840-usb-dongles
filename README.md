@@ -5,13 +5,6 @@ Anything I can find about the various nrf52840 (either with USB cables or direct
 Created Dec 7th, 2019
 
 
-# Big update Dec  9th, 2019
-
-# Just use [www.platformio.org](https://platformio.org/)
-
-Will update later but PlatformIO does seem to solve a lot of these issues.
-
-
   
 # Big Picture
 I want to make the best high school robotics program. 
@@ -56,12 +49,20 @@ updated Dec 8th 2019. Please send an issue or PR if you can replace any of the "
 |**[Nordic nrf-connect for desktop](https://www.novelbits.io/nrf52840-usb-dongle-tutorial-1/)**  | [yes](https://www.novelbits.io/nrf52840-usb-dongle-tutorial-1/) | not sure | not sure | not sure | not sure  |
 |**Run Nordic-SDK examples somehow**| not sure | [yes, issues, best to have a j-link](https://forum.arduino.cc/index.php?topic=649008.msg4392009#msg4392009) | not sure | not sure | [advanced-development-with-the-nrf5-sdk](https://learn.sparkfun.com/tutorials/nrf52840-advanced-development-with-the-nrf5-sdk)  |
 |**Run Arduino Examples using Nordic nrf-connect for desktop** | not sure| not sure| not sure | not sure | not sure  |
+|**[www.platformio.org](https://platformio.org/)** | not sure but has potential | not sure but has potential| not sure but has potential | Yes have not tested | not sure but has potential  |
+|**[my Gitpod of Openthread](https://github.com/hpssjellis/my-gitpod-of-openthread)** | yes download to nrf-connect| not sure but has potential| not sure | not sure | not sure  |
+
 
 
 Note: Easiest approach would be to get the Nordic dongle working on the Arduino platform, but I have had some issues doing the opposite with the Nano 33 BLE getting it to load Nordic SDK examples. It does work but it is a bit flaky and I am not yet sure of all pin assignments. (I bricked my Nano 33 BLE Sense and need a j-link to fix it). Best to see if I can get some of these boards working fully on both platforms.
 
 # Present thinking: 
 
+New Dec 11, 2019. 
+
+I may hvae to use a mix of platforms.
+
+Older ideas
 I think I should use the Nordic board for basic BLE, Arduino Nano 33 BLE Sense board for most sensory work. Still wondering how to connect Wifi to these boards for the occassional diagnostics when needed.
 1. Use the $18 USD [Arduino Nano 33 IOT](https://store.arduino.cc/usa/nano-33-iot) which has wifi but only bluetooth 4.2 but that should be compatible, except for long range BLE. Something I read is that both Radios can not operate at the same time, not sure if that is going to be a problem.
 2. Use $20.00 USD [ESP8266](https://www.adafruit.com/product/3213) stacking Adafruit feather for Wifi support on whichever board I finally use or something with the $22.00 USD [ESP32](https://www.adafruit.com/product/3619) also with stacking feather form factor.
@@ -70,13 +71,6 @@ I think I should use the Nordic board for basic BLE, Arduino Nano 33 BLE Sense b
 
 .
 
-# Big update Dec  9th, 2019
-
-# Just use [www.platformio.org](https://platformio.org/)
-
-Will update later but PlatformIO does seem to solve a lot of these issues.
-
-.
 
 
 
