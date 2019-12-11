@@ -49,8 +49,8 @@ updated Dec 8th 2019. Please send an issue or PR if you can replace any of the "
 |**[Nordic nrf-connect for desktop](https://www.novelbits.io/nrf52840-usb-dongle-tutorial-1/)**  | [yes](https://www.novelbits.io/nrf52840-usb-dongle-tutorial-1/) | not sure | not sure | not sure | not sure  |
 |**Run Nordic-SDK examples somehow**| not sure | [yes, issues, best to have a j-link](https://forum.arduino.cc/index.php?topic=649008.msg4392009#msg4392009) | not sure | not sure | [advanced-development-with-the-nrf5-sdk](https://learn.sparkfun.com/tutorials/nrf52840-advanced-development-with-the-nrf5-sdk)  |
 |**Run Arduino Examples using Nordic nrf-connect for desktop** | not sure| not sure| not sure | not sure | not sure  |
-|**[www.platformio.org](https://platformio.org/)** | not sure but has potential | not sure but has potential| not sure but has potential | Yes have not tested | not sure but has potential  |
-|**[my Gitpod of Openthread](https://github.com/hpssjellis/my-gitpod-of-openthread)** | yes download to nrf-connect| not sure but has potential| not sure | not sure | not sure  |
+|**[www.platformio.org](https://platformio.org/)** | not sure but has potential | not sure but has potential|  Yes have not tested | Yes have not tested | not sure but has potential  |
+|**[my Gitpod of Openthread](https://github.com/hpssjellis/my-gitpod-of-openthread)** | yes download to nrf-connect for desktop| not sure but has potential| not sure but has potential | not sure | not sure but has potential  |
 
 
 
