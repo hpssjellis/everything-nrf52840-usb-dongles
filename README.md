@@ -58,11 +58,6 @@ Note: Easiest approach would be to get the Nordic dongle working on the Arduino 
 
 # Present thinking: 
 
-New Dec 11, 2019. 
-
-I may hvae to use a mix of platforms.
-
-Older ideas
 I think I should use the Nordic board for basic BLE, Arduino Nano 33 BLE Sense board for most sensory work. Still wondering how to connect Wifi to these boards for the occassional diagnostics when needed.
 1. Use the $18 USD [Arduino Nano 33 IOT](https://store.arduino.cc/usa/nano-33-iot) which has wifi but only bluetooth 4.2 but that should be compatible, except for long range BLE. Something I read is that both Radios can not operate at the same time, not sure if that is going to be a problem.
 2. Use $20.00 USD [ESP8266](https://www.adafruit.com/product/3213) stacking Adafruit feather for Wifi support on whichever board I finally use or something with the $22.00 USD [ESP32](https://www.adafruit.com/product/3619) also with stacking feather form factor.
