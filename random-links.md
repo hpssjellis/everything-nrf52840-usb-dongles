@@ -23,6 +23,10 @@
 # Nordic software
 [Nordic nrf-connect for desktop download page](https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Connect-for-desktop/Download#infotabs)
 
+# Nordic SDK example explanations
+https://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.sdk5.v15.0.0%2Fnrf_dev_simple_timer_example.html
+
+
 
 
 # Nordic on Arduino platform ?
