@@ -1,6 +1,6 @@
 
 /*
-  Simple-LED-Pheripheral
+  simple-led-peripheral.ino
 
   This example creates a BLE peripheral with service that contains a
   characteristic to control an LED and another characteristic that
