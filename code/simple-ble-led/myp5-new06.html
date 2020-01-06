@@ -1,0 +1,73 @@
+
+<html>
+<head>
+
+<title>Simple LED, Rocksetta and p5.ble.js</title>
+
+<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+<script src="https://unpkg.com/p5ble@0.0.6/dist/p5.ble.js"></script>
+
+<script>
+
+// Global variables and constants
+
+// The serviceUuid must match the serviceUuid of the device you would like to connect
+const serviceUuid = "19b10010-e8f2-537e-4f6c-d104768a1214";
+
+let myCharacteristic;
+let input;
+let myBLE;
+
+
+function setup() {
+  myBLE = new p5ble();
+}
+
+
+function connectToBle() {
+  // Connect to a device by passing the service UUID
+  myBLE.connect(serviceUuid, gotCharacteristics);
+}
+
+
+function gotCharacteristics(error, characteristics) {
+  if (error) console.log('error: ', error);
+  console.log('characteristics: ', characteristics);
+  // Set the first characteristic as myCharacteristic
+  myCharacteristic = characteristics[0];
+}
+
+
+function myWriteToBle(myIn) {
+  myBLE.write(myCharacteristic, myIn);
+}
+
+
+</script>
+
+
+</head>
+<body>
+
+<H1>Simple LED, Rocksetta and p5.ble.js</H1>
+<h6>By <a href="https://www.rocksetta.com">Jeremy Ellis</a> Twitter <a href="https://twitter.com/rocksetta">@rocksetta</a></h6>
+
+
+<input type=button value="Connect to Simple-LED" onclick="{
+   connectToBle()
+}">
+
+
+<input type=button value="Led On" onclick="{
+  myWriteToBle('01')
+}">
+
+
+<input type=button value="Led Off" onclick="{
+  myWriteToBle('00')
+}"><br><br>
+
+
+
+</body>
+</html>
