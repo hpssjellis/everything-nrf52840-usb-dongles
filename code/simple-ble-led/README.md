@@ -2,7 +2,7 @@ Just got this working, Jan 6th, 2020
 
 
 
-WEIRD: I AM SURE THE CENTRAL CONTROLLER WORKED 2 DAYS AGO, BUT IT DOES NOT WORK TODAY JAN 8TH, 2020
+WEIRD: I AM SURE THE PERIPHERAL CONTROLLER WORKED 2 DAYS AGO, BUT IT DOES NOT WORK TODAY JAN 8TH, 2020
 
 
 Live Demo at <a href="https://hpssjellis.github.io/everything-nrf52840-usb-dongles/code/simple-ble-led/index.html">https://hpssjellis.github.io/everything-nrf52840-usb-dongles/code/simple-ble-led/index.html</a>
