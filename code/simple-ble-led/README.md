@@ -2,6 +2,9 @@ Just got this working, Jan 6th, 2020
 
 
 
+WEIRD: i AM SURE THIS WORKED 2 DAYS AGO, BUT IT DOES NOT WORK TODAY JAN 8TH, 2020
+
+
 Live Demo at <a href="https://hpssjellis.github.io/everything-nrf52840-usb-dongles/code/simple-ble-led/index.html">https://hpssjellis.github.io/everything-nrf52840-usb-dongles/code/simple-ble-led/index.html</a>
 
 
