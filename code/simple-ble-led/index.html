@@ -42,6 +42,11 @@ function myWriteToBle(myIn) {
   myBLE.write(myCharacteristic, myIn);
 }
 
+  
+  
+  
+  
+
 
 </script>
 
@@ -65,6 +70,10 @@ function myWriteToBle(myIn) {
 
 <input type=button value="Led Off" onclick="{
   myWriteToBle('00')
+}"><br>
+
+<input type=button value="Disconnect" onclick="{
+    myBLE.disconnect();
 }"><br><br>
 
 
