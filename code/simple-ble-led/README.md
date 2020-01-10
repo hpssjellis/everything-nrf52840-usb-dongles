@@ -37,7 +37,7 @@ In the serial monitor shows any BLE labelled with "LED" in the local name. Shows
 
 5. klausWifiBle.ino
 
-Awesome example by [Klaus](https://forum.arduino.cc/index.php?action=profile;area=showposts;u=1331775_K) of using a Nano 33 IoT to generate a webpage that then allows you to switch to BLE. The ble can be controlled by nrf-connect for mobile and switch back to the webpage. The web page also has easy to use buttons for turning the LED on and Off.
+Awesome example by [Klaus_K](https://forum.arduino.cc/index.php?action=profile;area=showposts;u=1331775_K) of using a Nano 33 IoT to generate a webpage that then allows you to switch to BLE. The ble can be controlled by nrf-connect for mobile and switch back to the webpage. The web page also has easy to use buttons for turning the LED on and Off.
 
 https://forum.arduino.cc/index.php?topic=657710.0
 
