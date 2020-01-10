@@ -1,14 +1,15 @@
 /*
-  Simple-LED-Central
+  Serial Show LED
 
   This example creates a BLE central service that communicates with 
-  the simple-LED-peripheral button controlled LED.
+  the simple-LED-myPeripheral button controlled LED. Printing out in the serial
+  monitor any connected LED service that has the local name containg LED.
+  LED flashes when trying to connect
 
   This example code is in the public domain.
   Edited By Jeremy Ellis
   Jan 2020
 
-  
 */
 
 
@@ -16,76 +17,31 @@
 
 // Global variables for button
 const int ledPin = LED_BUILTIN; // set ledPin to on-board LED
-const int buttonPin = 2;
-int myOldButtonValue;
 
-int myIncomingByte = 0;
-
-BLEDevice peripheralOld ;
+BLEDevice myPeripheralOld ;
 
 void setup() {
 
   pinMode(ledPin, OUTPUT);           
-  pinMode(buttonPin, INPUT_PULLDOWN); // use button pin as an input
   
   Serial.begin(9600);
   while (!Serial);
-
-  // begin initialization
   if (!BLE.begin()) {
     Serial.println("starting BLE failed!");
-
     while (1);
   }
 
-  Serial.println("BLE Central - Peripheral Explorer Rocksetta version 1.07");
-
-  // start scanning for peripherals
-  BLE.scan();
+  Serial.println("BLE Central - myPeripheral Explorer Rocksetta version 1.07");
+  BLE.scan(); // start scanning for myPeripherals
+  
 }
 
-void loop() {
-
-   updateBLE();
-
- //  updateBLE();
-
- // updateBLE();
-
+void loop() {   // main loop
+  updateBLE();
   delay(3000);
 }
 
-void updateBLE(){
-  
-  // check if a peripheral has been discovered
-  
-     BLEDevice peripheral = BLE.available();
-
-
-  if (peripheral) {
-    // discovered a peripheral, print out address, local name, and advertised service
-
-
-    // see if peripheral is a LED
-  //  if (peripheral.localName() == "LED") { //  content.indexOf("Teststring") >= 0
-    if (peripheral.localName().indexOf("LED") >= 0){ 
-      // Only print if peripheral has LED in it's local name  
-       BLE.stopScan();
-       controlLed(peripheral);     
-       Serial.println("Peripheral disconnected");
-       BLE.stopScan();
-     //  while (peripheral.connect()) {
-          peripheral.disconnect();
-      // }
-       BLE.scan();
-
-    }
-  }
-}
-
-
-
-
+// helper function to print HEX variables
 void printData(const unsigned char data[], int length) {
   for (int i = 0; i < length; i++) {
     unsigned char b = data[i];
@@ -97,105 +53,72 @@ void printData(const unsigned char data[], int length) {
 }
 
 
+void updateBLE(){
 
+  BLEDevice myPeripheral = BLE.available();
 
+  if (myPeripheral) {
 
+    //  if (myPeripheral.localName() == "LED") { //  use only if you know the exact name
+    if (myPeripheral.localName().indexOf("LED") >= 0){ // contains name 
+      BLE.stopScan();
+      // connect to the myPeripheral
+      Serial.println("Connecting ...");
+      digitalWrite(ledPin, HIGH); // LED on
+      if (myPeripheral.connect()) {
+        Serial.println("Connected");
+      } else {
+        Serial.println("Failed to connect!");
+        return;
+      }
 
-void controlLed(BLEDevice peripheral) {
+      // discover myPeripheral attributes
+      Serial.println("Discovering attributes ...");
+      if (myPeripheral.discoverAttributes()) {
+        Serial.println("Attributes discovered");
+      } else {
+        Serial.println("Attribute discovery failed!");
+        //myPeripheral.disconnect();
+        return;
+      }
 
-  // connect to the peripheral
-  Serial.println("Connecting ...");
+      BLECharacteristic ledCharacteristic =   myPeripheral.characteristic("19b10011-e8f2-537e-4f6c-d104768a1214");
+      // Note: Also works the 2 GATT's are slightly different: service=19b10010,  LED=19b10011
+      // BLECharacteristic ledCharacteristic =   myPeripheral.service("19b10010-e8f2-537e-4f6c-d104768a1214").characteristic("19b10011-e8f2-537e-4f6c-d104768a1214");  //worked
 
-  if (peripheral.connect()) {
-    Serial.println("Connected");
-  } else {
-    Serial.println("Failed to connect!");
-    return;
-  }
+      if (!ledCharacteristic) {
+        Serial.println("myPeripheral does not have LED characteristic!");
+        myPeripheral.disconnect();
+        return;
+      } else if (!ledCharacteristic.canWrite()) {
+        Serial.println("myPeripheral does not have a writable LED characteristic!");
+        myPeripheral.disconnect();
+        return;
+      }
 
-
-
-  // discover peripheral attributes
-  Serial.println("Discovering attributes ...");
-  if (peripheral.discoverAttributes()) {
-    Serial.println("Attributes discovered");
-  } else {
-    Serial.println("Attribute discovery failed!");
-    //peripheral.disconnect();
-    return;
-  }
-
-
-
-
-    BLECharacteristic ledCharacteristic =   peripheral.characteristic("19b10011-e8f2-537e-4f6c-d104768a1214");
-  // Note the 2 GATT's are slightly different: service=19b10010,  LED=19b10011
-   // BLECharacteristic ledCharacteristic =   peripheral.service("19b10010-e8f2-537e-4f6c-d104768a1214").characteristic("19b10011-e8f2-537e-4f6c-d104768a1214");  //worked
-
-
-
-  if (!ledCharacteristic) {
-    Serial.println("Peripheral does not have LED characteristic!");
-    peripheral.disconnect();
-    return;
-  } else if (!ledCharacteristic.canWrite()) {
-    Serial.println("Peripheral does not have a writable LED characteristic!");
-    peripheral.disconnect();
-    return;
-  }
-
-
-
-    //  Serial.print("ledCharacteristic.uuid(): ");
-  //Serial.println(ledCharacteristic.uuid());
-  //Serial.print("ledCharacteristic.properties(): ");
-  //Serial.println(ledCharacteristic.properties(), HEX);
-
-
-
-  
- // Serial.println("if (ledCharacteristic.canRead())");
-
-  // check if the characteristic is readable
-  if (ledCharacteristic.canRead()) {
-    // read the characteristic value
-    ledCharacteristic.read();
-
-    if (ledCharacteristic.valueLength() > 0) {
-            Serial.println();
-            Serial.print(peripheral.localName());
-            Serial.print("  0x");
-       printData(ledCharacteristic.value(), ledCharacteristic.valueLength());
-
-  
-      // print out the value of the characteristic
-      Serial.println(" HEX value: ");
-     // Serial.print(", value 0x");
-     // Serial.print(ledCharacteristic.value()[ledCharacteristic.valueLength()], HEX);
-
-     // sprintf(charVal, "%04X", testVal);
-    //  Serial.println(charVal);
-     //  char charVal[8];
-     //  sprintf(charVal, "%09X", ledCharacteristic.value());
-     //  Serial.println(charVal);
-      
-
+      // check if the characteristic is readable
+      if (ledCharacteristic.canRead()) {
+        // read the characteristic value
+        ledCharacteristic.read();
     
-    
-    
+        if (ledCharacteristic.valueLength() > 0) {
+          Serial.println();
+          Serial.print(myPeripheral.localName());
+          Serial.print("  0x");
+          printData(ledCharacteristic.value(), ledCharacteristic.valueLength());
+          // print out the value of the characteristic
+          Serial.println(" HEX value: ");       
+        }
+      }
+
+      Serial.println("myPeripheral disconnected");
+      digitalWrite(ledPin, LOW);
+      BLE.stopScan();
+      myPeripheral.disconnect();
+      BLE.scan();
+
     }
-  }
-
-
-  
-
-
-
-
- 
-
-
-
-}
+  }   // end  if (myperipheral)
+}     // end updateBLE()
 
   
