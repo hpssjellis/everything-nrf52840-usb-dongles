@@ -48,11 +48,10 @@ int myInterval = myWifiInterval;  // 1000 = wait 1 second
 unsigned long myOldTme=0;
 const int ledPin = LED_BUILTIN; // set ledPin to on-board LED
 bool myChooseWifi = true;
-int myBleNumber[4] = {32,45,12,91};
-bool myLedOn[4]    = {true, false, true, false};
-bool myBleActive[4]    = {false, false, false, false};
-String myBLENames[4]= {"LED02", "SimpleLED", "none", "nope"};
-const uint8_t* myLedValue[4];
+const int myMaxArray = 4;
+bool myBleActive[myMaxArray]    = {false, false, false, false};
+String myBLENames[myMaxArray]= {"LED02", "SimpleLED", "none", "nope"};
+const uint8_t* myLedValue[myMaxArray];
 
 
 WiFiServer server(80);
@@ -190,7 +189,7 @@ void myWifi(){
           client.print("<br><br><table border=1>");
           client.print("<tr>  <th>#</th>  <th>Active</th>  <th>LED</th>  <th>Name</th>  </tr>");
 
-          for (int BleLoop = 0; BleLoop < 4; BleLoop++) {     
+          for (int BleLoop = 0; BleLoop < myMaxArray; BleLoop++) {     
             client.print("<tr><td>");
             client.print(BleLoop);   
             if (!myBleActive[BleLoop]){  // check if not active
@@ -368,7 +367,7 @@ void updateBLE(){
 ////////////////////////////////// Start BLE Analysis  /////////////////////////////////////////////////////////////
 
           
-          for (int BleLoop = 0; BleLoop < 4; BleLoop++) {
+          for (int BleLoop = 0; BleLoop < myMaxArray; BleLoop++) {
             if (myPeripheral.localName() == myBLENames[BleLoop]){   
               Serial.println();
               Serial.print(myBLENames[BleLoop]);
