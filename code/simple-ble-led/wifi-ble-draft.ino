@@ -1,8 +1,11 @@
 /*
-  WiFi Web Server
+  WiFi BLE Server
 
- A simple web server that shows the value of the analog input pins.
+ A simple web server that shows the value of the analog input pins
+ shuts down and loads BLE to identify knone LED BLE active devices
+ then restarts Wifi before the page refreshes.
 
+expects several prenamed Simple LED devices to be nearby and fresh running
  This example is written for a network using WPA encryption. For
  WEP or WPA, change the Wifi.begin() call accordingly.
 
@@ -13,7 +16,10 @@
  by dlf (Metodo2 srl)
  modified 31 May 2012
  by Tom Igoe
-
+ 
+ modified Jan 14th, 2020
+ by Jeremy Ellis
+ Twitter @rocksetta
  */
 
 
@@ -34,7 +40,11 @@ char pass[] = SECRET_PASS;    // your network password (use for WPA, or use as k
 
 int keyIndex = 0;                 // your network key Index number (needed only for WEP)
 int status = WL_IDLE_STATUS;
-int myInterval = 40000;  // 1000 = wait 1 second
+
+int myWifiInterval = 40000;   // 40 seconds
+int myBleInterval = 6000;     // 6 seconds
+
+int myInterval = myWifiInterval;  // 1000 = wait 1 second
 unsigned long myOldTme=0;
 const int ledPin = LED_BUILTIN; // set ledPin to on-board LED
 bool myChooseWifi = true;
@@ -88,7 +98,7 @@ void loop() {
     myOldTme = myNewTime;      
     digitalWrite(ledPin, !digitalRead(ledPin)); // Toggle the LED on Pin 13 most boards  
     if (myChooseWifi) {  // shut off wifi turn on BLE
-      myInterval = 6000;  // 6 seconds
+      myInterval = myBleInterval;  // 6 seconds
       myChooseWifi = false;
       Serial.println("shutting down Wifi");  
       WiFi.end();
@@ -102,7 +112,7 @@ void loop() {
       BLE.scan(); 
     } else { // shut off BLE turn on Wifi
       myChooseWifi = true;
-      myInterval = 40000; // 40 seconds
+      myInterval = myWifiInterval; // 40 seconds
       Serial.println("Shutting down BLE");
       BLE.stopScan();
       BLE.end();
@@ -177,9 +187,7 @@ void myWifi(){
             client.println("<br />");
           }
 
-
-
-          client.print("<table border=1>");
+          client.print("<br><br><table border=1>");
           client.print("<tr>  <th>#</th>  <th>Active</th>  <th>LED</th>  <th>Name</th>  </tr>");
 
           for (int BleLoop = 0; BleLoop < 4; BleLoop++) {     
