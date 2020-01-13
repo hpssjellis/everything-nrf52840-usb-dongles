@@ -18,12 +18,12 @@
 
 
 
-#include <ArduinoBLE.h>
 #include <SPI.h>
 #include <WiFiNINA.h>
 #include "utility/wifi_drv.h"
 #include "arduino_secrets.h"
 
+#include <ArduinoBLE.h>
 
 #include "arduino_secrets.h" 
 ///////please enter your sensitive data in the Secret tab/arduino_secrets.h
@@ -34,9 +34,12 @@ char pass[] = SECRET_PASS;    // your network password (use for WPA, or use as k
 
 int keyIndex = 0;                 // your network key Index number (needed only for WEP)
 int status = WL_IDLE_STATUS;
-int myInterval=40000;  // 1000 = wait 1 second
+int myInterval=20000;  // 1000 = wait 1 second
 unsigned long myOldTme=0;
 const int ledPin = LED_BUILTIN; // set ledPin to on-board LED
+bool myChooseWifi = true;
+
+
 
 WiFiServer server(80);
 
@@ -69,28 +72,47 @@ void setup() {
 
 
 void loop() {
-  
-  myWifi();
+
+
+  if (myChooseWifi){
+    myWifi();
+  } else { // Do BLE
+    updateBLE(); 
+  }
   unsigned long myNewTime = millis();
   if ((unsigned long)(myNewTime - myOldTme) >= myInterval) {
     myOldTme = myNewTime;      
     digitalWrite(ledPin, !digitalRead(ledPin)); // Toggle the LED on Pin 13 most boards  
-    Serial.println("shutting down Wifi, wifi status:");  
-    WiFi.end(); 
-   // status= ;
-   // Serial.println(status);    
-    delay(2000);
+    if (myChooseWifi) {  // shut off wifi turn on BLE
+      myChooseWifi = false;
+      Serial.println("shutting down Wifi");  
+      WiFi.end();
+      delay(2000); 
+      Serial.println("Starting BLE");  
+      BLE.begin();
+      BLE.scan(); 
+    } else { // shut off BLE turn on Wifi
+      myChooseWifi = true;
+      Serial.println("Shutting down BLE");
+      BLE.stopScan();
+      BLE.end();
+      delay(2000);
+      Serial.println("Starting Wifi");
+      // Re-initialize the WiFi driver
+      // This is currently necessary to switch from BLE to WiFi
+      // wiFiDrv.wifiDriverDeinit();
+      // wiFiDrv.wifiDriverInit();
+      status = WiFi.begin(ssid, pass);
+      server.begin();
+      Serial.print("Wifi Status: ");
+      Serial.println(status); 
+    }
     
-    Serial.print("Starting Wifi, wifi status:");
-    status = WiFi.begin(ssid, pass);
-    server.begin();
-    Serial.println(status); 
-    
-   }
+   }  // end timer
 
-}
+}    // end void loop()
 
-
+////////////////////////////////// Wifi stuff //////////////////
 
 void setupWifi(){
     // attempt to connect to Wifi network:
@@ -182,3 +204,90 @@ void printWifiStatus() {
   Serial.print(rssi);
   Serial.println(" dBm");
 }
+
+
+
+////////////////////////////////// end Wifi ////////////////////
+
+///////////////////////////// BLE stuff ////////////////////////
+// helper function to print HEX variables
+void printData(const unsigned char data[], int length) {
+  for (int i = 0; i < length; i++) {
+    unsigned char b = data[i];
+    if (b < 16) {
+      Serial.print("0");
+    }
+    Serial.print(b, HEX);
+  }
+}
+
+
+void updateBLE(){
+
+  BLEDevice myPeripheral = BLE.available();
+
+  if (myPeripheral) {
+
+    //  if (myPeripheral.localName() == "LED") { //  use only if you know the exact name
+    if (myPeripheral.localName().indexOf("LED") >= 0){ // contains name 
+      BLE.stopScan();
+      // connect to the myPeripheral
+      Serial.println("Connecting ...");
+      digitalWrite(ledPin, HIGH); // LED on
+      if (myPeripheral.connect()) {
+        Serial.println("Connected");
+      } else {
+        Serial.println("Failed to connect!");
+        return;
+      }
+
+      // discover myPeripheral attributes
+      Serial.println("Discovering attributes ...");
+      if (myPeripheral.discoverAttributes()) {
+        Serial.println("Attributes discovered");
+      } else {
+        Serial.println("Attribute discovery failed!");
+        //myPeripheral.disconnect();
+        return;
+      }
+
+      BLECharacteristic ledCharacteristic =   myPeripheral.characteristic("19b10011-e8f2-537e-4f6c-d104768a1214");
+      // Note: Also works the 2 GATT's are slightly different: service=19b10010,  LED=19b10011
+      // BLECharacteristic ledCharacteristic =   myPeripheral.service("19b10010-e8f2-537e-4f6c-d104768a1214").characteristic("19b10011-e8f2-537e-4f6c-d104768a1214");  //worked
+
+      if (!ledCharacteristic) {
+        Serial.println("myPeripheral does not have LED characteristic!");
+        myPeripheral.disconnect();
+        return;
+      } else if (!ledCharacteristic.canWrite()) {
+        Serial.println("myPeripheral does not have a writable LED characteristic!");
+        myPeripheral.disconnect();
+        return;
+      }
+
+      // check if the characteristic is readable
+      if (ledCharacteristic.canRead()) {
+        // read the characteristic value
+        ledCharacteristic.read();
+    
+        if (ledCharacteristic.valueLength() > 0) {
+          Serial.println();
+          Serial.print(myPeripheral.localName());
+          Serial.print("  0x");
+          printData(ledCharacteristic.value(), ledCharacteristic.valueLength());
+          // print out the value of the characteristic
+          Serial.println(" HEX value: ");       
+        }
+      }
+
+      Serial.println("myPeripheral disconnected");
+      digitalWrite(ledPin, LOW);
+      BLE.stopScan();
+      myPeripheral.disconnect();
+      BLE.scan();
+
+    }
+  }   // end  if (myperipheral)
+}     // end updateBLE()
+
+  
