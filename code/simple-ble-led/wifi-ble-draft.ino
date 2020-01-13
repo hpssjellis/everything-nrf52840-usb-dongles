@@ -34,7 +34,7 @@ char pass[] = SECRET_PASS;    // your network password (use for WPA, or use as k
 
 int keyIndex = 0;                 // your network key Index number (needed only for WEP)
 int status = WL_IDLE_STATUS;
-int myInterval=20000;  // 1000 = wait 1 second
+int myInterval = 40000;  // 1000 = wait 1 second
 unsigned long myOldTme=0;
 const int ledPin = LED_BUILTIN; // set ledPin to on-board LED
 bool myChooseWifi = true;
@@ -84,6 +84,7 @@ void loop() {
     myOldTme = myNewTime;      
     digitalWrite(ledPin, !digitalRead(ledPin)); // Toggle the LED on Pin 13 most boards  
     if (myChooseWifi) {  // shut off wifi turn on BLE
+      myInterval = 6000;  // 6 seconds
       myChooseWifi = false;
       Serial.println("shutting down Wifi");  
       WiFi.end();
@@ -93,6 +94,7 @@ void loop() {
       BLE.scan(); 
     } else { // shut off BLE turn on Wifi
       myChooseWifi = true;
+      myInterval = 40000; // 40 seconds
       Serial.println("Shutting down BLE");
       BLE.stopScan();
       BLE.end();
