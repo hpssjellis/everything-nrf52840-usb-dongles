@@ -46,7 +46,19 @@ https://forum.arduino.cc/index.php?topic=657710.0
 
 
 
-6. Working on Wifi webpage that shows the BLE LED status
+6. wifi-ble-draft.ino
+
+This is the now working, just needs a few touch ups. Expects a few BLE devices to be nearby
+and setup with the Simple_LED.ino program. The names of the Simple-LED devices are very important as this version 
+has the names pre-programmed.
+
+
+
+7. wifi-ble-generic.ino
+
+working on this
+
+
 
 
 
