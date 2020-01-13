@@ -38,7 +38,11 @@ int myInterval = 40000;  // 1000 = wait 1 second
 unsigned long myOldTme=0;
 const int ledPin = LED_BUILTIN; // set ledPin to on-board LED
 bool myChooseWifi = true;
-
+int myBleNumber[4] = {32,45,12,91};
+bool myLedOn[4]    = {true, false, true, false};
+bool myBleActive[4]    = {false, false, false, false};
+String myBLENames[4]= {"LED02", "SimpleLED", "none", "nope"};
+const uint8_t* myLedValue[4];
 
 
 WiFiServer server(80);
@@ -89,7 +93,11 @@ void loop() {
       Serial.println("shutting down Wifi");  
       WiFi.end();
       delay(2000); 
-      Serial.println("Starting BLE");  
+      Serial.println("Starting BLE"); 
+      myBleActive[0] = false;
+      myBleActive[1] = false;
+      myBleActive[2] = false;
+      myBleActive[3] = false;
       BLE.begin();
       BLE.scan(); 
     } else { // shut off BLE turn on Wifi
@@ -155,7 +163,7 @@ void myWifi(){
           client.println("HTTP/1.1 200 OK");
           client.println("Content-Type: text/html");
           client.println("Connection: close");  // the connection will be closed after completion of the response
-          client.println("Refresh: 5");  // refresh the page automatically every 5 sec
+          client.println("Refresh: 10");  // refresh the page automatically every 10 sec, remove if you want one read.
           client.println();
           client.println("<!DOCTYPE HTML>");
           client.println("<html>");
@@ -168,6 +176,29 @@ void myWifi(){
             client.print(sensorReading);
             client.println("<br />");
           }
+
+
+
+          client.print("<table border=1>");
+          client.print("<tr>  <th>#</th>  <th>Active</th>  <th>LED</th>  <th>Name</th>  </tr>");
+
+          for (int BleLoop = 0; BleLoop < 4; BleLoop++) {     
+            client.print("<tr><td>");
+            client.print(BleLoop);   
+            if (!myBleActive[BleLoop]){  // check if not active
+               client.print("</td>  <td>Not Active</td>  <td>...</td>  <td>"); 
+            } else {
+              if (ledIsOn(myLedValue[BleLoop])){
+                 client.print("</td>  <td>Active</td>  <td>On</td>  <td>");              
+              } else {
+                 client.print("</td>  <td>Active</td>  <td>Off</td>  <td>");    
+              }
+            }
+            client.print(myBLENames[BleLoop]);  
+            client.println("</td></tr>");     
+          }   // end for loop
+    
+          client.println("</table><br />"); 
           client.println("</html>");
           break;
         }
@@ -212,6 +243,15 @@ void printWifiStatus() {
 ////////////////////////////////// end Wifi ////////////////////
 
 ///////////////////////////// BLE stuff ////////////////////////
+
+
+
+
+
+
+
+
+
 // helper function to print HEX variables
 void printData(const unsigned char data[], int length) {
   for (int i = 0; i < length; i++) {
@@ -224,7 +264,41 @@ void printData(const unsigned char data[], int length) {
 }
 
 
+
+bool ledIsOn(const unsigned char data[]) {
+  for (int i = 0; i < 1; i++) {
+    unsigned char b = data[i];
+    if (b <= 0) {
+      return false;
+    } else {
+      return true;
+   }
+  }
+}
+
+
+
+
+/*
+bool ledIsOn(const unsigned char data[], int length) {
+  for (int i = 0; i < length; i++) {
+    unsigned char b = data[i];
+    if (b <= 0) {
+      return false;
+    } else {
+      return true;
+   }
+  }
+}
+
+*/
+
+
+
+
+
 void updateBLE(){
+
 
   BLEDevice myPeripheral = BLE.available();
 
@@ -274,12 +348,34 @@ void updateBLE(){
     
         if (ledCharacteristic.valueLength() > 0) {
           Serial.println();
+          Serial.print("ledCharacteristic.valueLength(): ");
+          Serial.print(ledCharacteristic.valueLength());
+          Serial.print("LocalName: ");
           Serial.print(myPeripheral.localName());
           Serial.print("  0x");
           printData(ledCharacteristic.value(), ledCharacteristic.valueLength());
           // print out the value of the characteristic
-          Serial.println(" HEX value: ");       
-        }
+          Serial.println(" HEX value: "); 
+
+////////////////////////////////// Start BLE Analysis  /////////////////////////////////////////////////////////////
+
+          
+          for (int BleLoop = 0; BleLoop < 4; BleLoop++) {
+            if (myPeripheral.localName() == myBLENames[BleLoop]){   
+              Serial.println();
+              Serial.print(myBLENames[BleLoop]);
+              Serial.println();
+              myBleActive[BleLoop] = true; 
+              myLedValue[BleLoop] = ledCharacteristic.value();
+              } 
+          }
+
+
+
+
+
+////////////////////////////////// End BLE Analysis  /////////////////////////////////////////////////////////////                
+        }   // end ledChaaracteristic
       }
 
       Serial.println("myPeripheral disconnected");
