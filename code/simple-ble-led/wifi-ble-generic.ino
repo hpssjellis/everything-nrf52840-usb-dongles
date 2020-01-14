@@ -37,24 +37,22 @@ char ssid[] = SECRET_SSID;        // your network SSID (name)
 char pass[] = SECRET_PASS;    // your network password (use for WPA, or use as key for WEP)
 
 
-
-int keyIndex = 0;                 // your network key Index number (needed only for WEP)
-int status = WL_IDLE_STATUS;
-
+// Dynamic Global Variables
 int myWifiInterval = 40000;       // 40 seconds
 int myBleInterval = 6000;         // 6 seconds
+const int myMaxArray = 10;        // no idea how many BLE devices
+int myWebPageRefresh = 10;        // seconds for webpage to refresh, set really large for static website
 
+//Regular Global Variables
+int keyIndex = 0;                 // your network key Index number (needed only for WEP)
+int status = WL_IDLE_STATUS;
 int myInterval = myWifiInterval;  // 1000 = wait 1 second
 unsigned long myOldTme=0;
 const int ledPin = LED_BUILTIN;   // set ledPin to on-board LED
 bool myChooseWifi = true;
-
-const int myMaxArray = 10;        // no idea how many BLE devices
 bool myBleActive[myMaxArray];     // not pre-defined as false
 String myBLENames[myMaxArray];
 const uint8_t* myLedValue[myMaxArray];
-
-
 WiFiServer server(80);
 
 void setup() {
@@ -181,7 +179,9 @@ void myWifi(){
           client.println("HTTP/1.1 200 OK");
           client.println("Content-Type: text/html");
           client.println("Connection: close");  // the connection will be closed after completion of the response
-          client.println("Refresh: 10");  // refresh the page automatically every 10 sec, remove if you want one read.
+          client.print("Refresh: ");           
+          client.println(myWebPageRefresh);    // refresh the page automatically every x seconds, set to zero to stop? 
+          
           client.println();
           client.println("<!DOCTYPE HTML>");
           client.println("<html>");
