@@ -364,9 +364,9 @@ void updateBLE(){
     
         if (ledCharacteristic.valueLength() > 0) {
           Serial.println();
-          Serial.print("ledCharacteristic.valueLength(): ");
+          Serial.print("value-length: ");
           Serial.print(ledCharacteristic.valueLength());
-          Serial.print("LocalName: ");
+          Serial.print(", LocalName: ");
           Serial.print(myPeripheral.localName());
           Serial.print("  0x");
           printData(ledCharacteristic.value(), ledCharacteristic.valueLength());
@@ -378,7 +378,7 @@ void updateBLE(){
 
           bool myBleIsStored = false;
           int myStoredLocation;
-          for (int BleLoop2 = myMaxArray; BleLoop2 > 0 ; BleLoop2++) { // count down and check if BLE device is already saved
+          for (int BleLoop2 = myMaxArray-1; BleLoop2 >= 0 ; BleLoop2--) { // count down and check if BLE device is already saved
             if (myPeripheral.localName() == myBLENames[BleLoop2]){
               myBleIsStored = true;
              }
