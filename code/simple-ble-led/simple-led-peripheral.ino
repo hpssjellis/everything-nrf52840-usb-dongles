@@ -26,10 +26,12 @@ Can use Simple-LED-Central To communicated with this.
 
 #include <ArduinoBLE.h>
 
+
+
 // Global constants and variables
 const int ledPin = LED_BUILTIN; // set ledPin to on-board LED
 const int buttonPin = 4;        // set buttonPin to digital pin 4
-int myOldButtonValue;
+int myOldButtonValue = 0; 
 
 BLEService ledService("19B10010-E8F2-537E-4F6C-D104768A1214"); // create service
 
@@ -63,9 +65,11 @@ void setup() {
     digitalWrite(ledPin, HIGH);
     while (1);  // kills it here
   }
-
+//////////////////////////////////// Important name should be unique but with LED /////////////
   // set the local name peripheral advertises
-  BLE.setLocalName("SimpleLED");
+  BLE.setLocalName("33ble01LED");
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
   
   // set the service
   BLE.setAdvertisedService(ledService);
@@ -80,6 +84,8 @@ void setup() {
   // set default values
   ledCharacteristic.writeValue(0);
   buttonCharacteristic.writeValue(0);
+ // ledCharacteristic.writeValue((byte)0x00);
+ // buttonCharacteristic.writeValue((byte)0x00);
 
   // start advertising
   BLE.advertise();
@@ -96,7 +102,8 @@ void loop() {
 
   if (myOldButtonValue != myButtonValue){ 
     myOldButtonValue = myButtonValue; 
-    digitalWrite(ledPin, myOldButtonValue);
+    digitalWrite(ledPin, myOldButtonValue); 
+    ledCharacteristic.writeValue(myOldButtonValue);
   }
 
   // Check if external program controlling button
@@ -104,6 +111,6 @@ void loop() {
     digitalWrite(ledPin, ledCharacteristic.value());
   }
 
-  delay(10); 
+  //delay(1); 
   
 }
