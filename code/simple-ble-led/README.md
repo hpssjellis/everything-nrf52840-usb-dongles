@@ -56,7 +56,20 @@ has the names pre-programmed.
 
 7. wifi-ble-generic.ino
 
-working on this
+This does seem to be working, just having disconnect issues that I am working on. 2 arduino help forums about it
+
+https://forum.arduino.cc/index.php?topic=657710.new;topicseen#new
+
+
+https://forum.arduino.cc/index.php?topic=659164.0
+
+
+
+
+
+
+
+
 
 
 
