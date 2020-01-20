@@ -32,6 +32,7 @@ Can use Simple-LED-Central To communicated with this.
 const int ledPin = LED_BUILTIN; // set ledPin to on-board LED
 const int buttonPin = 4;        // set buttonPin to digital pin 4
 int myOldButtonValue = 0; 
+int timeOut = 0;
 
 BLEService ledService("19B10010-E8F2-537E-4F6C-D104768A1214"); // create service
 
@@ -67,7 +68,7 @@ void setup() {
   }
 //////////////////////////////////// Important name should be unique but with LED /////////////
   // set the local name peripheral advertises
-  BLE.setLocalName("33ble01LED");
+  BLE.setLocalName("LEDnano33iot");
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
   
@@ -111,6 +112,18 @@ void loop() {
     digitalWrite(ledPin, ledCharacteristic.value());
   }
 
-  //delay(1); 
-  
+  BLEDevice central = BLE.central();
+
+  if (central) {
+    while (central.connected()  ) {
+     // if (switchCharacteristic.written()) {
+     // }
+      delay(1);
+      timeOut++;
+     if (timeOut > 6000){
+     central.disconnect();
+     timeOut = 0;
+     }
+   }
+  } 
 }
