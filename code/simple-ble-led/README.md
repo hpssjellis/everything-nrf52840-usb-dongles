@@ -67,6 +67,10 @@ https://forum.arduino.cc/index.php?topic=659164.0
 
 
 
+simple-led-fast-disconnect.ino   DRAFT
+
+Hopefully the last file. This one should allow a connection for only a few seconds so that the above webpage reads all the connected devices.
+
 
 
 
