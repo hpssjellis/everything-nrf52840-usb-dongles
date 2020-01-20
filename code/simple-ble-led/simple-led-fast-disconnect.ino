@@ -33,6 +33,8 @@ const int ledPin = LED_BUILTIN; // set ledPin to on-board LED
 const int buttonPin = 4;        // set buttonPin to digital pin 4
 int myOldButtonValue = 0; 
 int timeOut = 0;
+int myDisconnect = 10000;   // disconnect after 6 seconds = 6000
+
 
 BLEService ledService("19B10010-E8F2-537E-4F6C-D104768A1214"); // create service
 
@@ -48,6 +50,19 @@ void setup() {
   pinMode(ledPin, OUTPUT);           
   pinMode(buttonPin, INPUT_PULLDOWN); // use button pin as an input
 
+
+  // begin initialization
+  if (!BLE.begin()) {
+    while (1);  // kills it here, so no LED flashing
+  }
+  
+  //////////////////////////////////// Important name should be unique but with LED /////////////
+  // set the unique local name the peripheral advertises. Should contain LED 
+  BLE.setLocalName("LEDnano33ble01");
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  
   // Note: No serial needing a line feed so this works with battery power.
   // just to prove it is running, flash LED twice, since no serial.
   digitalWrite(ledPin, HIGH);
@@ -60,18 +75,7 @@ void setup() {
   digitalWrite(ledPin, LOW);
   delay(400);
 
-  // begin initialization
-  if (!BLE.begin()) {
 
-    digitalWrite(ledPin, HIGH);
-    while (1);  // kills it here
-  }
-//////////////////////////////////// Important name should be unique but with LED /////////////
-  // set the local name peripheral advertises
-  BLE.setLocalName("LEDnano33iot");
-
-/////////////////////////////////////////////////////////////////////////////////////////////////
-  
   // set the service
   BLE.setAdvertisedService(ledService);
 
@@ -98,6 +102,18 @@ void loop() {
   
   BLE.poll();  // poll for BLE events
 
+  BLEDevice central = BLE.central();
+
+  if (central.connected()  ) {
+   delay(1);
+   timeOut++;
+  }
+
+  if (timeOut > myDisconnect){
+    central.disconnect();
+    timeOut = 0;
+  }
+   
   // Read button, compare and set button
   int myButtonValue = digitalRead(buttonPin);
 
@@ -112,18 +128,4 @@ void loop() {
     digitalWrite(ledPin, ledCharacteristic.value());
   }
 
-  BLEDevice central = BLE.central();
-
-  if (central) {
-    while (central.connected()  ) {
-     // if (switchCharacteristic.written()) {
-     // }
-      delay(1);
-      timeOut++;
-     if (timeOut > 6000){
-     central.disconnect();
-     timeOut = 0;
-     }
-   }
-  } 
 }
