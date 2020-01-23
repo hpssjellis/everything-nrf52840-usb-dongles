@@ -2,6 +2,21 @@
 Anything I can find about the various nrf52840 (either with USB cables or direct plugin dongles) by Nordic, Arduino, Adafruit, Sparkfun, MakerDiary and others
 
 
+Update: Jan 22, 2020
+
+Making some headway here
+
+https://community.platformio.org/t/like-if-you-have-an-nrf52840-nordic-usb-dongle-arduino-nano-33-ble-adafruit-sparkfun-april-makerdairy-fanstel-particle-or-any-other/11112/9
+
+
+and here
+
+https://community.platformio.org/t/same-bootloader-same-softdevice-different-board-different-pins/11411/2
+
+Looks like the Nano 33 BLE defines pins from P0_00  right up to P1_15 directly from the nRF52840 SOC, which should make using the Nano33BLE bootloarder on other boards much easier to work with.
+
+
+
 Created Dec 7th, 2019
 
 
