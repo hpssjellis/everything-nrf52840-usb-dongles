@@ -7,7 +7,4 @@ Note: P0_3   or P0_12  or P1_08  stand for direct pin connections to the nRF5284
 Note: Getting the Pin wrong can brick your board. I bricked my Nordic board and it took a few attempts to re-install the bootloader.
 
 
-![](multi-boards.jpg)
-
-
-![](multi-board2-gif.gif)
+![](multi-board-gif2.gif)
