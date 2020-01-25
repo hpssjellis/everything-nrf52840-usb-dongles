@@ -71,7 +71,21 @@ updated Dec 8th 2019. Please send an issue or PR if you can replace any of the "
 
 Note: Easiest approach would be to get the Nordic dongle working on the Arduino platform, but I have had some issues doing the opposite with the Nano 33 BLE getting it to load Nordic SDK examples. It does work but it is a bit flaky and I am not yet sure of all pin assignments. (I bricked my Nano 33 BLE Sense and need a j-link to fix it). Best to see if I can get some of these boards working fully on both platforms.
 
-# Present thinking: 
+# Present thinking (New Jan 2020): 
+
+1. Use the particle debugger to drag and drop either the Nordic bootloader or Arduino Bootloader onto any of the nRF52840 boards.
+2. Create pins_arduino.h and variant.cpp files for each board.
+3. Brick several boards while I get the pins wrong.
+4. Find even correct pins don't make the programs work.
+5. Decide to just use the Arduino nano33IoT and Nano33BLESense
+6. Start updating my robotics course to use whichever board(s) I prefer.
+
+https://github.com/hpssjellis/particle.io-photon-high-school-robotics
+
+7. Purchase class sets of the Arduino boards and start the new Robotics course in Sept 2020.
+
+
+# Present thinking (Old Dec 2019): 
 
 I think I should use the Nordic board for basic BLE, Arduino Nano 33 BLE Sense board for most sensory work. Still wondering how to connect Wifi to these boards for the occassional diagnostics when needed.
 1. Use the $18 USD [Arduino Nano 33 IOT](https://store.arduino.cc/usa/nano-33-iot) which has wifi but only bluetooth 4.2 but that should be compatible, except for long range BLE. Something I read is that both Radios can not operate at the same time, not sure if that is going to be a problem.
