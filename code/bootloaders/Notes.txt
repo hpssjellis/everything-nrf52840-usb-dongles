@@ -1,0 +1,12 @@
+For super easy installation of nRF52840 bootloaders get the Particle Debugger from adafruit
+
+https://www.adafruit.com/product/4001
+
+For $20, It auto creates a folder which you drag the bootloader.hex file onto and it fully installs 
+the program if the folder does not come back with a FAIL.txt file.
+
+Your board has to be in DFU mode, typically double press the user button.
+
+All that is needed from the Nordic boards are SWKCLK, SWKDIO and GND, connected to the correct pins on the 
+Particle Debugger which is connected to your computer and use an external usb charger to power the board.
+
