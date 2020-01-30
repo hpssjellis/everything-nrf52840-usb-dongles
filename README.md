@@ -15,6 +15,68 @@ https://community.platformio.org/t/same-bootloader-same-softdevice-different-boa
 
 Looks like the Nano 33 BLE defines pins from P0_00  right up to P1_15 directly from the nRF52840 SOC, which should make using the Nano33BLE bootloarder on other boards much easier to work with.
 
+A summary from the above link is here:
+
+So without assigning any brand new pins just changing the pre-defined Arduino Nano 33 BLE pin assignments. This is my summary so far.
+
+Once again, if anyone knows how to define pins from scratch, I could probably get a few more pins working on the other boards.
+
+
+
+|Arduino Name|Arduino Pin #|Port|Particle Xenon/Argon|Nordic|
+| --- | --- | --- | --- | --- |
+|TX|0|P1.03|||
+|RX|1|P1.10|||
+|D2|2|P1.11|D6||
+|D3|3|P1.12|D7 User LED (blue)||
+|D4|4|P1.15|SCK(D14)|Pin1.15|
+|D5|5|P1.13|MOSI(D12)|Pin1.13|
+|D6|6|P1.14|MISO(D11)||
+|D7|7|P0.09||Causes RESET|
+|D8|8|P0.10||Causes RESET|
+|D9|9|P0.27|SCL/D1||
+|D10|10|P1.02|D3||
+|D11|11|P1.01|D2||
+|D12|12|P1.08|D4||
+|D13|13|P0.13|RED LED|Pin0.13|
+|A0|14|P0.04|A1(D18)||
+|A1|15|P0.05|||
+|A2|16|P0.30|A4(D15) (User LED orange)|
+|A3|17|P0.29|A3(D16)|Pin0.29|
+|A4|18|P0.31|A5(D14)||
+|A5|19|P0.02||Pin0.02|
+|A6|20|P0.28|A2(D17)||
+|A7|21|P0.03|A0(D19)||
+||22|LED Red||Pin0.24|
+||23|LED Green|||
+||24|LED Blue||LED1|
+||25|LED Power||LED2|
+||26|PIN_INT_APDS||Causes RESET|
+||27|PIN_PDM_PWR||Pin0.17|
+||28|PIN_PDM_CLK|SDA/D0||
+||29|PIN_PDM_DIN||Causes RESET|
+||30|PIN_WIRE_SDA1|GREEN LED||
+||31|PIN_WIRE_SCL1|BLE LED||
+||32|PIN_ENABLE_SENSORS_3V3|||
+||33|PIN_ENABLE_I2C_PULLUP|||
+||34||RESET||
+||35||RESET|Causes RESET|
+||36||RESET|Causes RESET|
+||37||||
+||38||||
+||39||||
+||40||||
+||41||||
+||42||||
+||43||||
+||44||||
+||45||||
+||46||||
+||47||||
+||||||
+
+
+
 
 
 Created Dec 7th, 2019
