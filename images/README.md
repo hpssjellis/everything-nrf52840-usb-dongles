@@ -4,6 +4,19 @@ Just by using Arduino Nano33BLE pin numbers this is what I have found works on t
 
 
 ![](nano33ble02.jpg)
+
+.
+
+
 ![](particle-xenon-argon-arduiino-bootloader.png)
+
+..
+
+
+
 ![](makerdiary-dongle-with-arduino-bootloader.png)
+
+.
+
+
 ![](nordic-nrf52840-usb-dongle-with-arduino-bootloader.png	)
